@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  We are The Brigade -- @dasbrigade
+
+  Ben Fogarty -- Partner, Design Director -- @benfogarty
+  Chris Jones -- Partner, Director of Engineering -- @chrisfjones
+  Nathan Searles -- Partner, Technical Director -- @nathansearles
+  Zeke Howard -- Partner, Director of Accounts -- @zekehoward
+  Mimi Danh -- Executive Producer -- @mimidanh
+  Ben Krogh -- Lead Designer -- @benkrogh
+  Josh Rounsville -- Web Developer -- @joshrounsville
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr

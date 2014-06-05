@@ -1,2 +1,1 @@
-gorilly
-=======
+Gorilly Static Site

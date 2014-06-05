@@ -1,0 +1,163 @@
+/* ==========================================================================
+  Typography
+========================================================================== */
+
+/**** **** **** **** ****
+  Base
+**** **** **** **** ****/
+
+html {
+  background: #fff;
+  color: $textColor;
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @include breakpoint(medium) {
+    -webkit-text-size-adjust: none;
+  }
+  @include breakpoint(small) {
+    -webkit-text-size-adjust: none;
+  }
+}
+
+body {
+  @include bodyFont();
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+
+  @include breakpoint(medium) {
+    margin-bottom: 1px;
+  }
+  @include breakpoint(small) {
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+  }
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+/**** **** **** **** ****
+  P's & UL's
+**** **** **** **** ****/
+
+p {
+  margin: 0 0 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &.disc {
+    list-style: disc;
+  }
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+/**** **** **** **** ****
+  Links
+**** **** **** **** ****/
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0;
+    color: $linkHover;
+  }
+}
+
+
+/**** **** **** **** ****
+  Headlines
+**** **** **** **** ****/
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @include headlineFont();
+  line-height: 1.1;
+  text-rendering: optimizeLegibility;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+
+h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1, .h1 {
+  font-size: 36px;
+}
+
+h2, .h2 {
+  font-size: 30px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+}
+
+h4, .h4 {
+  font-size: 18px;
+}
+
+h5, .h5 {
+  font-size: 14px;
+}
+
+h6, .h6 {
+  font-size: 12px;
+}
+
+h1 small, .h1 small {
+  font-size: 24px;
+}
+
+h2 small, .h2 small {
+  font-size: 18px;
+}
+
+h3 small, .h3 small, h4 small, .h4 small {
+  font-size: 14px;
+}
+
+
+/**** **** **** **** ****
+  Extras
+**** **** **** **** ****/
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 80%;
+}

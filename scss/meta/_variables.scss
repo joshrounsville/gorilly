@@ -1,0 +1,22 @@
+/* ==========================================================================
+  Variables
+========================================================================== */
+
+$padding: 20px;
+$margin: 50px;
+
+$textColor: #333;
+$linkColor: #333;
+$linkHover: lighten($linkColor, 20%);
+
+@mixin bodyFont() {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin headlineFont() {
+  font-family: helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
