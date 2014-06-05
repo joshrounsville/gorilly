@@ -1,0 +1,36 @@
+/* ==========================================================================
+  Callout
+========================================================================== */
+
+
+.callout {
+  position: relative;
+  h1 {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    font-size: 65px;
+    @include playfairBold();
+    color: $green;
+    line-height: 1.25;
+    span {
+      background: #f1f1f1;
+      display: inline-block;
+      margin: 0 0 8px;
+      padding: 0 25px;
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 65%;
+    left: 16%;
+    font-size: 15px;
+  }
+
+  @include breakpoint(large) {
+    h1 {
+      font-size: 58px;
+      top: 15%;
+    }
+  }
+}

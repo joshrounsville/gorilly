@@ -1,0 +1,107 @@
+/* ==========================================================================
+  Outline Box
+========================================================================== */
+
+
+.outline-box {
+  border-top: 1px solid $darkGray;
+  border-bottom: 1px solid $darkGray;
+  position: relative;
+  margin-bottom: 50px;
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    width: 1px;
+    height: calc(100% + 20px);
+    background: $darkGray;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    z-index: 2;
+  }
+  &:after {
+    right: 10px;
+    left: auto;
+  }
+  &.no-top {
+    border-top: none;
+    &:before,
+    &:after {
+      height: calc(100% + 15px);
+      top: -3px;
+    }
+  }
+
+  .no-csscalc & {
+    &:before,
+    &:after {
+      height: 108%;
+      top: -5px;
+    }
+    &.no-top {
+      &:before,
+      &:after {
+        top: 0;
+      }
+    }
+  }
+
+  .row {
+    margin-bottom: 0;
+    background-image: linear-gradient(
+      to bottom,
+      #fff,
+      #fff 50%,
+      #fcf7ec 50%,
+      #fcf7ec 100%
+    );
+    h4 {
+      margin: 80px 0 0 0;
+    }
+    h1 {
+      margin: 30px 0 0 0;
+    }
+    p {
+      margin: 70px 0 0 0;
+      padding: 0 50px;
+    }
+    .btn {
+      margin: 40px 0 0 0;
+      font-size: 15px;
+    }
+  }
+  .bottom-tag {
+    background: $green;
+    color: #fff;
+    text-transform: uppercase;
+    @include oswald();
+    font-size: 12px;
+    padding: 5px 10px 8px;
+    width: 210px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -105px;
+  }
+  h4 {
+    @include oswald();
+    color: $darkGray;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(large) {
+    .row {
+      h4 {
+        margin: 60px 0 0 0;
+      }
+      h1 {
+        margin: 20px 0 0 0;
+      }
+      .btn {
+        margin: 30px 0 0 0;
+      }
+    }
+  }
+
+}

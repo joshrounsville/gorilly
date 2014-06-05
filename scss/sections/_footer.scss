@@ -1,3 +1,124 @@
 /* ==========================================================================
   Footer
 ========================================================================== */
+
+
+footer {
+  @include ptSerif();
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 50px 0;
+  h5 {
+    margin: 0 0 12px;
+    color: #fff;
+  }
+  ul {
+    margin: 0;
+    @include clearfix();
+  }
+  a {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: $green;
+    }
+  }
+}
+
+.nav-footer {
+  float: left;
+  width: 50%;
+  @include clearfix();
+  li {
+    display: block;
+    width: 32%;
+    float: left;
+    margin-bottom: 12px;
+    &:nth-child(-n+3) {
+      @include ptSerifBold();
+    }
+  }
+
+  @include breakpoint(large) {
+    li {
+      width: 28%;
+    }
+  }
+}
+
+.nav-footer-social {
+  width: 25%;
+  float: left;
+  li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+  a {
+    display: block;
+    background: #fff;
+    color: $purple;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 100%;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $green;
+    }
+  }
+
+  @include breakpoint(large) {
+    li {
+      margin: 0 7px 0 0;
+    }
+    a {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      padding-top: 2px;
+    }
+  }
+}
+
+.mailing-list {
+  display: block;
+  float: right;
+  width: 25%;
+  font-size: 14px;
+  position: relative;
+  input {
+    display: block;
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid #fff;
+    padding: 6px 0;
+    color: #fff;
+    @include placeholder(#fff);
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $green;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 50px $purple inset;
+      -webkit-text-fill-color: #fff;
+    }
+    &[type=submit] {
+      border: none;
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      width: auto;
+      @include oswald();
+      font-size: 10px;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        color: $green;
+      }
+    }
+  }
+}

@@ -144,13 +144,13 @@ figure {
 }
 
 ::-moz-selection {
-  background: $textColor;
+  background: $green;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: $textColor;
+  background: $green;
   color: #fff;
   text-shadow: none;
 }

@@ -4,7 +4,14 @@
 
 form {
   margin: 0;
+}
+
+textarea,
+input {
   @include placeholder(#ccc);
+  border: none;
+  outline: 0;
+  transition: all .2s ease-in-out;
 }
 
 textarea {
@@ -80,6 +87,12 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+label {
+  .placeholder & {
+    display: none;
+  }
 }
 
 

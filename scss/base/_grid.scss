@@ -13,12 +13,13 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1170px;
+  max-width: 1172px;
   @include clearfix();
 }
 
 .row {
   margin-right: -15px;
+  margin-bottom: $margin;
   margin-left: -15px;
   display: flex;
   @include clearfix();

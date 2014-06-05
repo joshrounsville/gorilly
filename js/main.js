@@ -6,5 +6,11 @@ $(function() {
   var isDesktop = body.css('margin-bottom') !== '1px';
   var notDesktop = body.css('margin-bottom') === '1px';
 
+  // svg fallback
+  if ( !Modernizr.svg ) {
+    $('img[src*="svg"]').attr('src', function() {
+      return $(this).attr('src').replace('.svg', '.png');
+    });
+  }
 
 });

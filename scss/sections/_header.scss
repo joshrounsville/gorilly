@@ -1,3 +1,95 @@
 /* ==========================================================================
   Header
 ========================================================================== */
+
+header {
+  background: #fff;
+  padding: 0 0 70px;
+  .row {
+    margin-bottom: 0;
+  }
+}
+
+.logo {
+  margin-top: 30px;
+  display: block;
+  float: left;
+  text-align: center;
+  span {
+    margin-top: 12px;
+    padding-left: 7px;
+    display: block;
+  }
+}
+
+.nav-main {
+  @include oswald();
+  text-transform: uppercase;
+  font-size: 14px;
+  float: right;
+  ul {
+    margin: 35px 190px 0 0;
+    display: block;
+
+  }
+  li {
+    display: inline-block;
+    margin: 0 0 0 40px;
+    &.first {
+      margin: 0;
+    }
+  }
+  a {
+    &:not(.btn) {
+      color: $darkGray;
+      padding-bottom: 2px;
+      border-bottom: 4px solid transparent;
+      &:hover,
+      &:focus {
+        border-bottom: 4px solid $yellow;
+      }
+    }
+    &.highlight,
+    &.btn {
+      color: $green;
+    }
+    &.btn {
+      position: relative;
+      top: -2px;
+      margin-left: -20px;
+    }
+    &.tag {
+      float: right;
+      display: block;
+      color: #fff;
+      background: $green;
+      border-bottom: 7px solid $yellow;
+      margin-top: -70px;
+      padding: 41px 20px 8px;
+      &:hover,
+      &:focus {
+        background: darken($green, 10%);
+        border-bottom: 7px solid $yellow;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    ul {
+      margin-right: 160px;
+    }
+    li {
+      margin: 0 0 0 15px;
+    }
+    a {
+      &.btn {
+        margin-left: -5px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      &.tag {
+        padding: 41px 10px 8px;
+      }
+    }
+  }
+}

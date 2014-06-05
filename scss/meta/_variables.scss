@@ -3,20 +3,56 @@
 ========================================================================== */
 
 $padding: 20px;
-$margin: 50px;
+$margin: 40px;
 
-$textColor: #333;
-$linkColor: #333;
-$linkHover: lighten($linkColor, 20%);
+$green: #63BF82;
+$lightGreen: #b5ddbf;
+$purple: #2A2539;
+$yellow: #FCDE00;
+$orange: #f3a536;
+$darkGray: #2A2539;
+$lightGray: #A5A5A5;
 
-@mixin bodyFont() {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$textColor: $darkGray;
+$linkColor: $green;
+$linkHover: $darkGray;
+
+@mixin oswald() {
+  font-family: 'Oswald', sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
-@mixin headlineFont() {
-  font-family: helvetica, sans-serif;
+@mixin playfairBold() {
+  font-family: 'Playfair Display', serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
 }
+
+@mixin playfairBlack() {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@mixin ptSerif() {
+  font-family: 'PT Serif', serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin ptSerifBold() {
+  font-family: 'PT Serif', serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin ptSerifCaption() {
+  font-family: 'PT Serif Caption', serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+

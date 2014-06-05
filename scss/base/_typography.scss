@@ -7,8 +7,6 @@
 **** **** **** **** ****/
 
 html {
-  background: #fff;
-  color: $textColor;
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include breakpoint(medium) {
@@ -20,11 +18,12 @@ html {
 }
 
 body {
-  @include bodyFont();
-  font-size: 14px;
+  @include ptSerif();
+  font-size: 16px;
   line-height: 1.4;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
+  color: $textColor;
+  background: $purple;
 
   @include breakpoint(medium) {
     margin-bottom: 1px;
@@ -51,11 +50,11 @@ textarea {
 **** **** **** **** ****/
 
 p {
-  margin: 0 0 15px;
+  margin: 0 0 20px;
 }
 
 ul {
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
   list-style: none;
   &.disc {
@@ -64,8 +63,12 @@ ul {
 }
 
 ol {
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
+}
+
+.headline {
+  font-size: 18px;
 }
 
 
@@ -76,6 +79,7 @@ ol {
 a {
   color: $linkColor;
   text-decoration: none;
+  transition: all .2s ease-in-out;
   &:focus,
   &:active,
   &:hover {
@@ -91,9 +95,10 @@ a {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  @include headlineFont();
+  @include playfairBold();
   line-height: 1.1;
-  text-rendering: optimizeLegibility;
+  margin: 0;
+  color: $green;
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
@@ -103,30 +108,35 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
   color: #999;
 }
 
-h1, h2, h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-h4, h5, h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 h1, .h1 {
-  font-size: 36px;
+  font-size: 50px;
+  margin: 0 0 20px;
+  @include breakpoint(large) {
+    font-size: 46px;
+  }
 }
 
 h2, .h2 {
-  font-size: 30px;
+  font-size: 40px;
+  margin: 0 0 20px;
+  @include breakpoint(large) {
+    font-size: 36px;
+  }
 }
 
 h3, .h3 {
-  font-size: 24px;
+  font-size: 28px;
+  margin: 0 0 15px;
+  @include breakpoint(large) {
+    font-size: 26px;
+  }
 }
 
 h4, .h4 {
   font-size: 18px;
+  @include breakpoint(large) {
+    font-size: 16px;
+  }
 }
 
 h5, .h5 {
