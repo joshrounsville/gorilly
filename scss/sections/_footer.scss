@@ -94,12 +94,14 @@ footer {
     display: block;
     width: 100%;
     background: none;
+    border: none;
     border-bottom: 1px solid #fff;
     padding: 6px 0;
     color: #fff;
     @include placeholder(#fff);
     &:hover,
     &:focus {
+      border: none;
       border-bottom: 1px solid $green;
     }
     &:-webkit-autofill {

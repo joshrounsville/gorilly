@@ -89,11 +89,139 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-label {
+.placeholder {
   .placeholder & {
     display: none;
   }
 }
+
+input,
+textarea {
+  border: 1px solid $darkGray;
+  display: block;
+  padding: 15px 20px;
+  resize: none;
+  &:hover,
+  &:focus {
+    border: 1px solid $lightGray;
+  }
+}
+
+.form-general {
+  .form-row {
+    @include clearfix();
+    margin: 0 0 30px;
+  }
+  p {
+    font-size: 20px;
+    text-align: center;
+  }
+  label {
+    display: block;
+    width: 20%;
+    margin: 15px 2% 0 0;
+    float: left;
+    @include oswald();
+  }
+  input,
+  textarea {
+    width: 78%;
+    float: right;
+  }
+  .select-wrap {
+    position: relative;
+    float: left;
+    width: 50%;
+    background: #fff;
+    margin-right: 20px;
+    .inline-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      padding: 10px 15px;
+      margin: 0;
+      color: $orange;
+      font-size: 22px;
+      display: block;
+      border-left: 1px solid $darkGray;
+      z-index: 0;
+      width: auto;
+      transition: border .2s ease-in-out;
+      background: #fff;
+    }
+  }
+  select {
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid $darkGray;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #ccc;
+    width: 100%;
+    @include oswald();
+    transition: border .2s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      border: 1px solid $lightGray;
+      outline: 0;
+      + .inline-label {
+        border-left: 1px solid $lightGray;
+      }
+    }
+  }
+  .radio-list {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+    label {
+      width: auto;
+      display: inline;
+      margin: 0 7px 0 0;
+      bottom: -3px;
+      position: relative;
+    }
+    input[type=radio] {
+      width: auto;
+      border-radius: 0;
+      -webkit-appearance: none;
+      display: block;
+      background: #fff;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: " ";
+        display: none;
+        width: 32px;
+        height: 32px;
+        left: 1px;
+        bottom: 2px;
+        background: url(/img/structure/check.svg) no-repeat center center;
+        background-size: 100%;
+        animation: fadeIn .2s both;
+      }
+      &:checked {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 
 
 

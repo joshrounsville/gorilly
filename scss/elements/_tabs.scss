@@ -1,0 +1,100 @@
+/* ==========================================================================
+  Tabs
+========================================================================== */
+
+
+.tab-nav {
+  display: block;
+  width: 100%;
+  li {
+    display: block;
+    float: left;
+    width: 25%;
+    border-right: 3px solid #fff;
+    &:last-of-type {
+      border: none;
+    }
+  }
+  a {
+    display: block;
+    background: $green;
+    color: $lightGreen;
+    text-align: center;
+    @include oswald();
+    font-size: 12px;
+    border-bottom: 9px solid $green;
+    padding: 4px 0 5px;
+    &:hover,
+    &:focus,
+    &.active {
+      color: $darkGray;
+      border-bottom: 9px solid $yellow;
+      span {
+        color: #fff;
+      }
+    }
+    span {
+      @include playfairBlack();
+      font-size: 25px;
+      margin: 0 7px 0 0;
+      transition: color .2s ease-in-out;
+      color: $lightGreen;
+    }
+  }
+}
+
+.tab-wrap {
+  background: #fcf7ec url(/img/structure/border-bottom.png) repeat-x center 99.5%;
+  padding: 40px 40px 20px;
+  .btn-next {
+    float: right;
+    margin-right: -40px;
+  }
+}
+
+.tab {
+  display: none;
+  animation: fadeIn .2s both;
+  &.active {
+    display: block;
+  }
+}
+
+.tab-header {
+  text-align: center;
+  padding: 20px 0 30px;
+  position: relative;
+  h3 {
+    font-size: 35px;
+  }
+  .btn-back {
+    position: absolute;
+    left: 0;
+    @include oswald();
+    font-size: 12px;
+    color: $darkGray;
+    background: $lightGreen;
+    padding: 9px 25px;
+    height: 33px;
+    &:focus,
+    &:hover {
+      background: $green;
+      color: #fff;
+      &:before {
+        background: $green;
+      }
+    }
+    &:before {
+      content: " ";
+      display: block;
+      background: $lightGreen;
+      height: 23px;
+      width: 23px;
+      position: absolute;
+      top: 5px;
+      left: -12px;
+      transform: rotate(45deg);
+      transition: background .2s ease-in-out;
+    }
+  }
+}

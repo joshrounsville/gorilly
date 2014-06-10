@@ -8,6 +8,45 @@
 }
 
 
+/**** **** **** **** **** ****
+  Dropdown Out
+**** **** **** **** **** ****/
+
+@keyframes dropdownOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+
+/**** **** **** **** **** ****
+  Dropdown In
+**** **** **** **** **** ****/
+
+@keyframes dropdownIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 
 /**** **** **** **** **** ****
   Fade In

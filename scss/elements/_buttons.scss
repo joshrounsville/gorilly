@@ -41,7 +41,8 @@
   &:hover,
   &:focus {
     border: 2px solid $green;
-    background: none;
+    background: $green;
+    color: #fff;
   }
 }
 

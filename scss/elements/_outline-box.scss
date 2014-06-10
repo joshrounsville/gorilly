@@ -48,6 +48,7 @@
   }
 
   .row {
+    position: relative;
     margin-bottom: 0;
     background-image: linear-gradient(
       to bottom,
@@ -56,6 +57,21 @@
       #fcf7ec 50%,
       #fcf7ec 100%
     );
+    &:before,
+    &:after {
+      content: " ";
+      background: #fff;
+      width: 15px;
+      display: block;
+      position: absolute;
+      top: -1px;
+      bottom: 0;
+      left: 0;
+    }
+    &:after {
+      right: 0;
+      left: auto;
+    }
     h4 {
       margin: 80px 0 0 0;
     }
@@ -92,6 +108,10 @@
 
   @include breakpoint(large) {
     .row {
+      &:before,
+      &:after {
+        width: 10px;
+      }
       h4 {
         margin: 60px 0 0 0;
       }

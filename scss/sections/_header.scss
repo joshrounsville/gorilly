@@ -5,8 +5,11 @@
 header {
   background: #fff;
   padding: 0 0 70px;
+  z-index: 2;
+  position: relative;
   .row {
     margin-bottom: 0;
+    animation: fadeIn .2s .3s both;
   }
 }
 
@@ -25,27 +28,33 @@ header {
 .nav-main {
   @include oswald();
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   float: right;
   ul {
-    margin: 35px 190px 0 0;
+    margin: 25px 190px 0 0;
     display: block;
 
   }
   li {
     display: inline-block;
-    margin: 0 0 0 40px;
-    &.first {
-      margin: 0;
+    padding: 10px 15px;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        a {
+          animation-delay: .5s + ($i * .03);
+        }
+      }
     }
   }
   a {
+    animation: fadeIn .2s .5s both;
     &:not(.btn) {
       color: $darkGray;
-      padding-bottom: 2px;
+      padding: 10px 0 2px;
       border-bottom: 4px solid transparent;
       &:hover,
-      &:focus {
+      &:focus,
+      &.active {
         border-bottom: 4px solid $yellow;
       }
     }
@@ -56,20 +65,107 @@ header {
     &.btn {
       position: relative;
       top: -2px;
-      margin-left: -20px;
+      margin-right: -20px;
+      margin-left: -10px;
+      font-size: 13px;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
     }
     &.tag {
       float: right;
       display: block;
       color: #fff;
       background: $green;
-      border-bottom: 7px solid $yellow;
-      margin-top: -70px;
-      padding: 41px 20px 8px;
+      border-bottom: 7px solid #fff;
+      margin-top: -80px;
+      padding: 42px 20px 8px;
       &:hover,
       &:focus {
         background: darken($green, 10%);
         border-bottom: 7px solid $yellow;
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    border: 1px solid transparent;
+    border-bottom: none;
+    &:after {
+      content: " ";
+      display: block;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      opacity: 0;
+      transition: opacity .1s ease-in-out;
+    }
+    &:hover,
+    &:focus {
+      border: 1px solid #cfcfcf;
+      border-bottom: none;
+      &:after {
+        opacity: 1;
+      }
+      .subnav {
+        animation: dropdownIn .2s both;
+        visibility: visible;
+        opacity: 1;
+      }
+      > a {
+        color: $green;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .subnav {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: -1px;
+    margin: 10px 0 0 0;
+    padding: 10px 20px;
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    @include ptSerifCaption();
+    font-size: 12px;
+    text-transform: none;
+    width: 220%;
+    transform: translatez(0);
+    animation: dropdownOut .2s both;
+    li {
+      margin: 15px 0 5px;
+      padding: 0 0 5px;
+      display: block;
+      border-bottom: 1px solid $green;
+      &:first-of-type {
+        margin-top: 5px;
+      }
+      &:last-of-type {
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    a {
+      &:not(.btn) {
+        padding: 0;
+        border: none;
+        &:hover,
+        &:focus {
+          border: none;
+          color: $green;
+        }
+      }
+      &.btn {
+        display: block;
+        margin: 15px 0 0;
       }
     }
   }

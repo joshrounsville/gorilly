@@ -1,0 +1,262 @@
+<!doctype html>
+<!--[if IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Account | Gorilly</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/img/structure/favicon.png">
+
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:700,900|PT+Serif+Caption|PT+Serif:400,700|Oswald' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <script src="/js/vendor/modernizr.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <div class="row">
+
+          <div class="span12">
+
+            <a href="/" class="logo">
+              <img src="/img/structure/gorilly.svg" alt="Gorilly" width="255" height="36">
+              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="248" height="17"></span>
+            </a>
+
+            <nav class="nav-main">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How it Works</a></li>
+                <li class="dropdown">
+                  <a href="#" class="active">Account</a>
+                  <ul class="subnav">
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">My Listings &amp; Codes</a></li>
+                    <li><a href="#">Profile &amp; Settings</a></li>
+                    <li><a href="#" class="btn btn-outline">Log Out</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="btn btn-outline">List a Product</a></li>
+              </ul>
+              <a href="#" class="tag">Search Products</a>
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+    <section>
+      <div class="container">
+
+        <div class="row">
+          <div class="span8 offset2">
+
+            <ul class="tab-nav">
+              <li><a href="#" class="active" data-target="tab-1"><span>01.</span> Create Listing</a></li>
+              <li><a href="#" data-target="tab-2"><span>02.</span> Location</a></li>
+              <li><a href="#" data-target="tab-3"><span>03.</span> Upload Photos</a></a></li>
+              <li><a href="#" data-target="tab-4"><span>04.</span> Review &amp; Post</a></li>
+            </ul>
+
+            <div class="tab-wrap">
+
+              <div class="tab active" data-tab="tab-1">
+                <div class="tab-header">
+                <a href="#" class="btn-back btn-form">Back</a>
+                  <h3>Create a Listing</h3>
+                </div>
+                <div class="tab-content">
+                  <form action="#" class="form-general">
+                    <div class="form-row">
+                      <label for="select-brand">Select a Brand</label>
+                      <div class="select-wrap">
+                        <select name="select-brand" id="select-brand">
+                          <option value="">Select a Brand</option>
+                          <option value="first">First Brand</option>
+                          <option value="second">Second Brand</option>
+                          <option value="third">Brand Number Three</option>
+                          <option value="fourth">Last Brand</option>
+                        </select>
+                        <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
+                      </div>
+                      <a href="#">Suggest a different product</a>
+                    </div>
+                    <div class="form-row">
+                      <label for="subject">Enter Subject</label>
+                      <textarea name="subject" id="subject" cols="30" rows="4" placeholder="(EXAMPLE) Blue Dodocase - 2 years old and still looking great! (MAX 300 characters)"></textarea>
+                    </div>
+                    <div class="form-row">
+                      <label for="description">Enter Detailed Description</label>
+                      <textarea name="description" id="description" cols="30" rows="5" placeholder="(EXAMPLE) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida neque nec malesuada ultricies. Nulla facilisi. Sed non tincidunt neque. In imperdiet, dui et gravida mollis."></textarea>
+                    </div>
+                    <div class="form-row">
+                      <a href="#" class="btn btn-next btn-form">Next</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="tab" data-tab="tab-2">
+                <div class="tab-header">
+                  <a href="#" class="btn-back btn-form">Back</a>
+                  <h3>Location</h3>
+                </div>
+                <div class="tab-content">
+                  <form action="#" class="form-general">
+                    <div class="form-row">
+                      <p>Enter zipcode where you will be showing this product:</p>
+                      <label for="zip-code">Enter Zip Code</label>
+                      <input type="text" name="zip-code" id="zip-code" placeholder="Zipcode">
+                    </div>
+                    <div class="form-row pad-t">
+                      <p>Are you willing to show this product in other parts of San Francisco?</p>
+                      <ul class="radio-list">
+                        <li>
+                          <label for="yes">Yes</label>
+                          <input type="radio" name="yes-no" id="yes" value="yes">
+                        </li>
+                        <li>
+                          <label for="no">No</label>
+                          <input type="radio" name="yes-no" id="no" value="no">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-row">
+                      <a href="#" class="btn btn-next btn-form">Next</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="tab" data-tab="tab-3">
+                <div class="tab-header">
+                  <a href="#" class="btn-back btn-form">Back</a>
+                  <h3>Tab 3</h3>
+                </div>
+                <div class="tab-content">
+                  <form action="#" class="form-general">
+                    <div class="form-row">
+                      <p>Enter zipcode where you will be showing this product:</p>
+                      <label for="zip-code">Enter Zip Code</label>
+                      <input type="text" name="zip-code" id="zip-code" placeholder="Zipcode">
+                    </div>
+                    <div class="form-row pad-t">
+                      <p>Are you willing to show this product in other parts of San Francisco?</p>
+                      <ul class="radio-list">
+                        <li>
+                          <label for="yes">Yes</label>
+                          <input type="radio" name="yes-no" id="yes" value="yes">
+                        </li>
+                        <li>
+                          <label for="no">No</label>
+                          <input type="radio" name="yes-no" id="no" value="no">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-row">
+                      <a href="#" class="btn btn-next btn-form">Next</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="tab" data-tab="tab-4">
+                <div class="tab-header">
+                  <a href="#" class="btn-back btn-form">Back</a>
+                  <h3>Tab 4</h3>
+                </div>
+                <div class="tab-content">
+                  <form action="#" class="form-general">
+                    <div class="form-row">
+                      <p>Enter zipcode where you will be showing this product:</p>
+                      <label for="zip-code">Enter Zip Code</label>
+                      <input type="text" name="zip-code" id="zip-code" placeholder="Zipcode">
+                    </div>
+                    <div class="form-row pad-t">
+                      <p>Are you willing to show this product in other parts of San Francisco?</p>
+                      <ul class="radio-list">
+                        <li>
+                          <label for="yes">Yes</label>
+                          <input type="radio" name="yes-no" id="yes" value="yes">
+                        </li>
+                        <li>
+                          <label for="no">No</label>
+                          <input type="radio" name="yes-no" id="no" value="no">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-row">
+                      <a href="#" class="btn btn-next btn-form">Next</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+        <div class="row">
+
+          <div class="span12">
+            <nav class="nav-footer">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How Does It</a></li>
+                <li><a href="#">Suggest a Product</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </nav>
+
+            <nav class="nav-footer-social">
+              <h5>Follow Us</h5>
+              <ul>
+                <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-tumblr"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </nav>
+
+            <form action="#" class="mailing-list">
+              <h5>Join Our Mailing List</h5>
+              <label for="email" class="placeholder">Enter Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter Email">
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+    <script src="/js/scripts.min.js"></script>
+
+  </body>
+</html>
