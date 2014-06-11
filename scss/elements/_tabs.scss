@@ -41,6 +41,15 @@
       color: $lightGreen;
     }
   }
+
+  @include breakpoint(large) {
+    a {
+      span {
+        font-size: 22px;
+        margin: 0 3px 0 0;
+      }
+    }
+  }
 }
 
 .tab-wrap {

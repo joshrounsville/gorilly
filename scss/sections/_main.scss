@@ -5,7 +5,12 @@
 
 section {
   background: #fff;
-  .container {
-    animation: fadeIn .3s .6s both;
+  .row {
+    animation: fadeIn .3s both;
+    @for $i from 1 through 14 {
+      &:nth-child(#{$i}n) {
+        animation-delay: .6s + ($i * .07);
+      }
+    }
   }
 }
