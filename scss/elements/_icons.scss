@@ -1,3 +1,17 @@
 /* ==========================================================================
   Icons
 ========================================================================== */
+
+.icon {
+  display: inline-block;
+  text-indent: -999em;
+  overflow: hidden;
+  direction: ltr;
+}
+
+.icon-arrow-down {
+  width: 20px;
+  height: 30px;
+  margin: 10px auto 0;
+  background: url(/img/icons/down-arrow.svg) no-repeat center center;
+}

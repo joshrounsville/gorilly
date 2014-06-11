@@ -145,6 +145,7 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 12px;
+  @include ptSerifCaption();
 }
 
 h1 small, .h1 small {

@@ -1,0 +1,164 @@
+/* ==========================================================================
+  Slider
+========================================================================== */
+
+
+.slider {
+  width: 96%;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0 60px;
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    z-index: 10;
+    background-image: linear-gradient(
+      to right,
+      rgba(255,255,255,1),
+      rgba(255,255,255,0)
+    );
+  }
+  &:after {
+    right: 0;
+    left: auto;
+    background-image: linear-gradient(
+      to left,
+      rgba(255,255,255,1),
+      rgba(255,255,255,0)
+    );
+  }
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  user-select: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide img {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: stretch;
+  zoom: 1;
+  @include clearfix();
+  .slick-loading & {
+      visibility: hidden;
+  }
+}
+
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  display: none;
+  align-items: center;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+  .slick-initialized & {
+    display: flex;
+  }
+  .slick-loading & {
+    visibility: hidden;
+  }
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+
+.slide-wrap {
+  display: block;
+  padding-bottom: 20px;
+  width: 100%;
+  &:hover,
+  &:focus {
+    .circle {
+      opacity: 1;
+    }
+  }
+  .circle {
+    display: block;
+    width: 69px;
+    height: 69px;
+    border: 4px solid $green;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 63px;
+    @include oswald();
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -34px 0 0 -34px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+  h6 {
+    text-align: center;
+    color: $darkGray;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.slide-next,
+.slide-prev {
+  display: block;
+  width: 31px;
+  height: 57px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  margin-top: -27px;
+  opacity: .6;
+  z-index: 11;
+  &:hover,
+  &:focus {
+    opacity: 1;
+    transform: translateX(-8px);
+  }
+}
+.slide-next {
+  right: 30px;
+  left: auto;
+  &:hover,
+  &:focus {
+    transform: translateX(8px);
+  }
+}

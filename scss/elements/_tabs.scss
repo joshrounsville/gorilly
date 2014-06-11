@@ -45,16 +45,23 @@
 
 .tab-wrap {
   background: #fcf7ec url(/img/structure/border-bottom.png) repeat-x center 99.5%;
-  padding: 40px 40px 20px;
-  .btn-next {
+  padding: 40px 40px 0;
+  .btn-next,
+  .btn-post {
     float: right;
     margin-right: -40px;
+  }
+  .btn-edit {
+    float: right;
+    margin-right: 20px;
   }
 }
 
 .tab {
   display: none;
   animation: fadeIn .2s both;
+  min-height: 615px;
+  position: relative;
   &.active {
     display: block;
   }
@@ -62,7 +69,7 @@
 
 .tab-header {
   text-align: center;
-  padding: 20px 0 30px;
+  padding: 30px 0 20px;
   position: relative;
   h3 {
     font-size: 35px;

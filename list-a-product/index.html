@@ -39,7 +39,7 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">How it Works</a></li>
                 <li class="dropdown">
-                  <a href="#" class="active">Account</a>
+                  <a href="#" class="highlight">Account</a>
                   <ul class="subnav">
                     <li><a href="#">Messages</a></li>
                     <li><a href="#">My Listings &amp; Codes</a></li>
@@ -47,7 +47,7 @@
                     <li><a href="#" class="btn btn-outline">Log Out</a></li>
                   </ul>
                 </li>
-                <li><a href="#" class="btn btn-outline">List a Product</a></li>
+                <li><a href="/list-a-product/" class="btn btn-outline active">List a Product</a></li>
               </ul>
               <a href="#" class="tag">Search Products</a>
             </nav>
@@ -102,7 +102,7 @@
                       <label for="description">Enter Detailed Description</label>
                       <textarea name="description" id="description" cols="30" rows="5" placeholder="(EXAMPLE) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida neque nec malesuada ultricies. Nulla facilisi. Sed non tincidunt neque. In imperdiet, dui et gravida mollis."></textarea>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row form-row-bottom">
                       <a href="#" class="btn btn-next btn-form">Next</a>
                     </div>
                   </form>
@@ -134,7 +134,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row form-row-bottom">
                       <a href="#" class="btn btn-next btn-form">Next</a>
                     </div>
                   </form>
@@ -144,29 +144,18 @@
               <div class="tab" data-tab="tab-3">
                 <div class="tab-header">
                   <a href="#" class="btn-back btn-form">Back</a>
-                  <h3>Tab 3</h3>
+                  <h3>Upload Photos</h3>
                 </div>
                 <div class="tab-content">
                   <form action="#" class="form-general">
                     <div class="form-row">
-                      <p>Enter zipcode where you will be showing this product:</p>
-                      <label for="zip-code">Enter Zip Code</label>
-                      <input type="text" name="zip-code" id="zip-code" placeholder="Zipcode">
-                    </div>
-                    <div class="form-row pad-t">
-                      <p>Are you willing to show this product in other parts of San Francisco?</p>
-                      <ul class="radio-list">
-                        <li>
-                          <label for="yes">Yes</label>
-                          <input type="radio" name="yes-no" id="yes" value="yes">
-                        </li>
-                        <li>
-                          <label for="no">No</label>
-                          <input type="radio" name="yes-no" id="no" value="no">
-                        </li>
+                      <p>Upload photos for your product listing:</p>
+                      <ul class="list-inline text-center">
+                        <li><a href="#" class="btn btn-green btn-narrow">From Product Website</a></li>
+                        <li><a href="#" class="btn btn-green btn-narrow">From Your Computer</a></li>
                       </ul>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row form-row-bottom">
                       <a href="#" class="btn btn-next btn-form">Next</a>
                     </div>
                   </form>
@@ -176,30 +165,28 @@
               <div class="tab" data-tab="tab-4">
                 <div class="tab-header">
                   <a href="#" class="btn-back btn-form">Back</a>
-                  <h3>Tab 4</h3>
+                  <h3>Review Your Post</h3>
                 </div>
                 <div class="tab-content">
                   <form action="#" class="form-general">
                     <div class="form-row">
-                      <p>Enter zipcode where you will be showing this product:</p>
-                      <label for="zip-code">Enter Zip Code</label>
-                      <input type="text" name="zip-code" id="zip-code" placeholder="Zipcode">
+                      <div class="form-review">
+                        <p class="subject">Blue Dodocase - 2 years old and still looking great!</p>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida neque nec malesuada ultricies. Nulla facilisi. Sed non tincidunt neque. In imperdiet, dui et gravida mollis.</p>
+                        <ul class="zipcode">
+                          <li>Zip Code: <span>94123</span></li>
+                          <li>Willing to Show Outside Your Zip Code: <span>Yes</span></li>
+                        </ul>
+                        <ul class="thumbnails">
+                          <li><img src="/img/products/hat-thumb.jpg" alt="Placeholder"></li>
+                          <li><img src="/img/products/hat-thumb-2.jpg" alt="Placeholder"></li>
+                          <li><img src="/img/products/hat-thumb-3.jpg" alt="Placeholder"></li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="form-row pad-t">
-                      <p>Are you willing to show this product in other parts of San Francisco?</p>
-                      <ul class="radio-list">
-                        <li>
-                          <label for="yes">Yes</label>
-                          <input type="radio" name="yes-no" id="yes" value="yes">
-                        </li>
-                        <li>
-                          <label for="no">No</label>
-                          <input type="radio" name="yes-no" id="no" value="no">
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="form-row">
-                      <a href="#" class="btn btn-next btn-form">Next</a>
+                    <div class="form-row form-row-bottom">
+                      <a href="#" class="btn btn-post btn-form">Post</a>
+                      <a href="#" class="btn btn-green btn-form btn-edit">Edit</a>
                     </div>
                   </form>
                 </div>

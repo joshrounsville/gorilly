@@ -34,6 +34,15 @@
   }
 }
 
+.btn-green {
+  background: $green;
+  &:hover,
+  &:focus {
+    background: darken($green, 10%);
+    color: #fff;
+  }
+}
+
 .btn-outline {
   background: none;
   border: 2px solid $lightGreen;
@@ -44,6 +53,10 @@
     background: $green;
     color: #fff;
   }
+}
+
+.btn-narrow {
+  padding: 11px 55px;
 }
 
 .btn-full {

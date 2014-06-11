@@ -72,6 +72,9 @@ header {
       &:focus {
         color: #fff;
       }
+      &.active {
+        border-bottom: 2px solid $yellow;
+      }
     }
     &.tag {
       float: right;
@@ -93,6 +96,7 @@ header {
     position: relative;
     border: 1px solid transparent;
     border-bottom: none;
+    transition: border .2s ease;
     &:after {
       content: " ";
       display: block;
@@ -102,16 +106,11 @@ header {
       right: 0;
       bottom: -1px;
       left: 0;
-      opacity: 0;
-      transition: opacity .1s ease-in-out;
     }
     &:hover,
     &:focus {
       border: 1px solid #cfcfcf;
       border-bottom: none;
-      &:after {
-        opacity: 1;
-      }
       .subnav {
         animation: dropdownIn .2s both;
         visibility: visible;

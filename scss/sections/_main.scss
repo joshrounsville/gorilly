@@ -5,5 +5,7 @@
 
 section {
   background: #fff;
-
+  .container {
+    animation: fadeIn .3s .6s both;
+  }
 }
