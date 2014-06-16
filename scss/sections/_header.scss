@@ -84,7 +84,8 @@ header {
       margin-top: -80px;
       padding: 42px 20px 8px;
       &:hover,
-      &:focus {
+      &:focus,
+      &.active {
         background: darken($green, 10%);
         border-bottom: 7px solid $yellow;
       }

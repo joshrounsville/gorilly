@@ -15,7 +15,7 @@
       border: none;
     }
   }
-  a {
+  .tab-item {
     display: block;
     background: $green;
     color: $lightGreen;
@@ -24,8 +24,6 @@
     font-size: 12px;
     border-bottom: 9px solid $green;
     padding: 4px 0 5px;
-    &:hover,
-    &:focus,
     &.active {
       color: $darkGray;
       border-bottom: 9px solid $yellow;

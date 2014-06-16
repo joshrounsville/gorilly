@@ -1,0 +1,103 @@
+/* ==========================================================================
+  Search
+========================================================================== */
+
+
+.search-results-list {
+  display: block;
+  width: 100%;
+  > li {
+    display: block;
+    width: 100%;
+    border: 1px solid $darkGray;
+    position: relative;
+    @include clearfix();
+    margin: 0 0 15px;
+    &:nth-of-type(even) {
+      .meta {
+        li {
+          &.count {
+            background: $orange;
+          }
+        }
+      }
+    }
+  }
+  .img-wrap {
+    float: left;
+    border-right: 1px solid $darkGray;
+  }
+  .content-wrap {
+    padding: 10px 20px;
+    float: left;
+  }
+  .meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    li {
+      display: inline-block;
+      margin: 0 0 0 7px;
+      font-size: 12px;
+      @include ptSerifBold();
+      &.count {
+        background: $green;
+        color: #fff;
+        padding: 4px 8px;
+        font-size: 18px;
+      }
+    }
+  }
+  h5 {
+    @include ptSerifBold();
+    position: relative;
+    margin: 10px 0 10px 0;
+    &:after {
+      content: " ";
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: $green;
+      margin: 10px 0 0 0;
+    }
+  }
+  p {
+    @include ptSerifBold();
+    font-size: 16px;
+    margin: 0 0 15px;
+  }
+  a {
+    @include oswald();
+    font-size: 12px;
+    color: $darkGray;
+    &:hover,
+    &:focus {
+      color: $green;
+    }
+  }
+}
+
+.search-results-map {
+  margin: 0 0 15px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.search-results-map-key {
+  border: 1px solid $darkGray;
+  padding: 15px;
+  font-size: 12px;
+  ul {
+    margin: 0;
+  }
+  li {
+    margin: 0 0 7px;
+    &:last-of-type {
+      margin: 0;
+    }
+    i {
+      margin: 0 7px 0 0;
+      font-size: 16px;
+    }
+  }
+}

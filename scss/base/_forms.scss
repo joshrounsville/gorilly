@@ -95,7 +95,7 @@ input::-moz-focus-inner {
   }
 }
 
-input,
+input:not(.btn),
 textarea {
   border: 1px solid $darkGray;
   display: block;
@@ -116,6 +116,25 @@ textarea {
       right: 0;
       bottom: 20px;
       left: 0;
+    }
+  }
+  .one-third {
+    width: 33.33333%;
+    float: left;
+    margin-left: -1px;
+    &:first-of-type {
+      margin: 0;
+    }
+    &.border {
+      border: 1px solid $darkGray;
+      padding: 6px 25px;
+      .btn {
+        padding: 6px;
+      }
+    }
+    input,
+    .select-wrap {
+      width: 100%;
     }
   }
   p {
@@ -156,6 +175,9 @@ textarea {
       width: auto;
       transition: border .2s ease-in-out;
       background: #fff;
+      i {
+        transition: transform .2s ease-in-out;
+      }
     }
   }
   select {
@@ -181,6 +203,13 @@ textarea {
       outline: 0;
       + .inline-label {
         border-left: 1px solid $lightGray;
+      }
+    }
+    &:focus {
+      + .inline-label {
+        i {
+          transform: rotate(180deg);
+        }
       }
     }
   }

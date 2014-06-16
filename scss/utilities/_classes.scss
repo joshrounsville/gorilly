@@ -70,7 +70,7 @@
 
 
 /**** **** **** **** ****
-  Text Align
+  Text
 **** **** **** **** ****/
 
 .text-center {
@@ -83,6 +83,22 @@
 
 .text-right {
   text-align: right;
+}
+
+.text-dark-gray {
+  color: $darkGray;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.pt-serif {
+  @include ptSerif();
 }
 
 

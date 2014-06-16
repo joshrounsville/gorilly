@@ -54,26 +54,12 @@ $(function() {
   var tabs = function() {
 
     var navWrap = $('.tab-nav');
-    var nav = navWrap.find('a');
+    var nav = navWrap.find('.tab-item');
     var tab = $('.tab');
     var tabWrap = $('.tab-wrap');
     var formBtn = $('.tab .btn-form');
     var editBtn = $('.tab .btn-edit');
     var count = tab.length;
-
-    nav.on('click', function(e) {
-      e.preventDefault();
-
-      var target = $(this).attr('data-target');
-          target = $(tabWrap).find('.tab[data-tab=' + target + ']');
-
-      tab.removeClass('active');
-      nav.removeClass('active');
-
-      target.addClass('active');
-      $(this).addClass('active');
-    });
-
 
     formBtn.on('click', function(e) {
       e.preventDefault();
@@ -88,7 +74,7 @@ $(function() {
 
       if ( $(this).hasClass('btn-next') ) {
         target = tabWrap.find('.tab[data-tab=tab-' + nextTab + ']');
-        targetNav = navWrap.find('a[data-target=tab-' + nextTab + ']');
+        targetNav = navWrap.find('.tab-item[data-target=tab-' + nextTab + ']');
 
         if ( nextTab <= count ) {
           tab.removeClass('active');
@@ -100,7 +86,7 @@ $(function() {
 
       } else if ( $(this).hasClass('btn-back') ) {
         target = tabWrap.find('.tab[data-tab=tab-' + prevTab + ']');
-        targetNav = navWrap.find('a[data-target=tab-' + prevTab + ']');
+        targetNav = navWrap.find('.tab-item[data-target=tab-' + prevTab + ']');
 
         if ( prevTab > 0 ) {
           tab.removeClass('active');
@@ -121,12 +107,13 @@ $(function() {
       nav.removeClass('active');
 
       tabWrap.find('.tab[data-tab=tab-1]').addClass('active');
-      navWrap.find('a[data-target=tab-1]').addClass('active');
+      navWrap.find('.tab-item[data-target=tab-1]').addClass('active');
     });
 
   };
 
   tabs();
+
 
 
 });
