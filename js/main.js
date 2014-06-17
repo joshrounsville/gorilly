@@ -15,7 +15,10 @@ $(function() {
   }
 
 
+
+
   // get sliders going
+
   var sliders = function() {
 
     var $slider = $('.slider');
@@ -51,6 +54,7 @@ $(function() {
 
 
   // tab action
+
   var tabs = function() {
 
     var navWrap = $('.tab-nav');
@@ -113,6 +117,30 @@ $(function() {
   };
 
   tabs();
+
+
+
+
+
+  // img swapper on product detail page
+  var mainImgWrap = $('div.img-large');
+  var mainImg = $(mainImgWrap).find('img');
+  var thumbImgs = $('ul.img-thumbs').find('img');
+  var mainSrc;
+  var thumbSrc;
+
+  thumbImgs.on('click', function() {
+    mainSrc = $(mainImg).attr('src');
+    thumbSrc = $(this).attr('src');
+
+    mainImgWrap.addClass('loading');
+    mainImg.attr('src', thumbSrc);
+
+    setTimeout(function() {
+      mainImgWrap.removeClass('loading');
+    }, 500);
+
+  });
 
 
 

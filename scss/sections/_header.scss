@@ -20,8 +20,9 @@ header {
   text-align: center;
   span {
     margin-top: 12px;
-    padding-left: 7px;
     display: block;
+    position: relative;
+    right: -8px;
   }
 }
 

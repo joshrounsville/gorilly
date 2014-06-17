@@ -84,12 +84,8 @@
   .btn-back {
     position: absolute;
     left: 0;
-    @include oswald();
-    font-size: 12px;
-    color: $darkGray;
     background: $lightGreen;
-    padding: 9px 25px;
-    height: 33px;
+    margin-left: 0;
     &:focus,
     &:hover {
       background: $green;
@@ -99,16 +95,7 @@
       }
     }
     &:before {
-      content: " ";
-      display: block;
       background: $lightGreen;
-      height: 23px;
-      width: 23px;
-      position: absolute;
-      top: 5px;
-      left: -12px;
-      transform: rotate(45deg);
-      transition: background .2s ease-in-out;
     }
   }
 }

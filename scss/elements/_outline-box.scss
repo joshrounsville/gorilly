@@ -47,16 +47,21 @@
     }
   }
 
+  &.bg-color {
+    .row {
+      background-image: linear-gradient(
+        to bottom,
+        #fff,
+        #fff 50%,
+        #fcf7ec 50%,
+        #fcf7ec 100%
+      );
+    }
+  }
+
   .row {
     position: relative;
     margin-bottom: 0;
-    background-image: linear-gradient(
-      to bottom,
-      #fff,
-      #fff 50%,
-      #fcf7ec 50%,
-      #fcf7ec 100%
-    );
     &:before,
     &:after {
       content: " ";
@@ -90,18 +95,21 @@
       font-size: 15px;
     }
   }
-  .bottom-tag {
+  .tag {
     background: $green;
     color: #fff;
     text-transform: uppercase;
     @include oswald();
     font-size: 12px;
     padding: 5px 10px 8px;
-    width: 210px;
     position: absolute;
-    bottom: -15px;
-    left: 50%;
-    margin-left: -105px;
+    text-align: center;
+    &.bottom {
+      bottom: -15px;
+      left: 50%;
+      margin-left: -105px;
+      width: 210px;
+    }
   }
   h4 {
     @include oswald();
