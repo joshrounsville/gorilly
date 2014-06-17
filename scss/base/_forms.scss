@@ -264,6 +264,12 @@ textarea {
       }
     }
   }
+  .thumbnails {
+    margin: 0;
+    li {
+      display: inline-block;
+    }
+  }
   .form-review {
     background: #fff;
     padding: 30px;
@@ -291,12 +297,6 @@ textarea {
         margin: 0 0 0 10px;
       }
     }
-    .thumbnails {
-      margin: 0;
-      li {
-        display: inline-block;
-      }
-    }
   }
 
   @include breakpoint(large) {
@@ -307,7 +307,7 @@ textarea {
 }
 
 .form-styled {
-  background: #fcf7ec;
+  background: $paleYellow;
   padding: 40px;
   text-align: center;
   display: block;
