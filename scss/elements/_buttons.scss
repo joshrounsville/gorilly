@@ -75,9 +75,9 @@
   display: inline-block;
   &:focus,
   &:hover {
-    background: $lightGreen;
+    background: darken($green, 10%);
     &:before {
-      background: $lightGreen;
+      background: darken($green, 10%);
     }
   }
   &:before {

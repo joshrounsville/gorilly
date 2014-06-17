@@ -3,6 +3,36 @@
 ========================================================================== */
 
 
+
+.product-nav {
+  a {
+    @include oswald();
+    font-size: 12px;
+    color: #9B9B9B;
+    position: absolute;
+    top: 350px;
+    left: -10px;
+    letter-spacing: 2px;
+    transform: rotate(-90deg);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    &.next-product {
+      top: 175px;
+      right: -10px;
+      left: auto;
+      transform: rotate(90deg);
+    }
+    &:hover,
+    &:focus {
+      color: lighten(#9B9B9B, 20%);
+    }
+  }
+  .no-csstransforms & {
+    display: none;
+  }
+}
+
 .product-box {
   padding: 40px 40px 30px;
   @include ptSerifCaption();
@@ -33,7 +63,7 @@
     line-height: 1.6;
   }
   .btn {
-    margin: 0 auto;
+    margin: 70px auto 0;
     width: 46%;
     display: block;
     padding-right: 0;
@@ -114,7 +144,7 @@
   margin: 0 0 20px;
   img {
     opacity: 1;
-    transition: opacity .15s ease;
+    transition: opacity .25s ease;
   }
   &.loading {
     img {
@@ -130,7 +160,7 @@
     display: block;
     float: left;
     width: 33.3333%;
-    padding: 0 20px 0 0;
+    padding: 0 20px 20px 0;
     cursor: pointer;
     &:hover,
     &:focus {

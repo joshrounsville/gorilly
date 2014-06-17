@@ -133,12 +133,15 @@ $(function() {
     mainSrc = $(mainImg).attr('src');
     thumbSrc = $(this).attr('src');
 
-    mainImgWrap.addClass('loading');
-    mainImg.attr('src', thumbSrc);
+    if ( mainSrc != thumbSrc ) {
+      mainImgWrap.addClass('loading');
+      mainImg.attr('src', thumbSrc);
 
-    setTimeout(function() {
-      mainImgWrap.removeClass('loading');
-    }, 500);
+      setTimeout(function() {
+        mainImgWrap.removeClass('loading');
+      }, 500);
+
+    }
 
   });
 

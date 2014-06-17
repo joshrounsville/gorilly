@@ -47,6 +47,25 @@
   }
 }
 
+.border-diamond {
+  position: relative;
+  &:after {
+    content: " ";
+    display: block;
+    width: 68px;
+    height: 20px;
+    background: url(/img/icons/diamonds-three.svg) no-repeat center center;
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -34px;
+  }
+  .no-svg {
+    &:after {
+      background-image: url(/img/icons/diamonds-three.png);
+    }
+  }
+}
 
 /**** **** **** **** ****
   Floats/Order
