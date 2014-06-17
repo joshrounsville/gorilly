@@ -107,17 +107,18 @@ textarea {
   }
 }
 
-.form-general {
-  .form-row {
-    @include clearfix();
-    margin: 0 0 30px;
-    &.form-row-bottom {
-      position: absolute;
-      right: 0;
-      bottom: 20px;
-      left: 0;
-    }
+.form-row {
+  @include clearfix();
+  margin: 0 0 30px;
+  &.form-row-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
   }
+}
+
+.form-general {
   .one-third {
     width: 33.33333%;
     float: left;
@@ -302,6 +303,46 @@ textarea {
     label {
       font-size: 14px;
     }
+  }
+}
+
+.form-styled {
+  background: #fcf7ec;
+  padding: 40px;
+  text-align: center;
+  display: block;
+  position: relative;
+  .inner {
+    border: 1px solid $darkGray;
+    outline: 1px solid $darkGray;
+    outline-offset: 10px;
+    padding: 40px;
+  }
+  .form-row {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  h3 {
+    @include ptSerif();
+    font-style: italic;
+  }
+  label {
+    font-style: italic;
+    margin: 0 0 5px;
+    display: block;
+  }
+  input {
+    margin: 0 auto;
+    width: 50%;
+    &.btn {
+      padding: 15px 0;
+    }
+  }
+  .spacer {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-style: italic;
   }
 }
 

@@ -6,6 +6,9 @@
 section {
   background: #fff;
   min-height: 500px;
+  .container {
+    padding-bottom: 50px;
+  }
   .row {
     animation: fadeIn .3s both;
     @for $i from 1 through 14 {

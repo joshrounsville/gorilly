@@ -1,0 +1,32 @@
+/* ==========================================================================
+  Border Box - no offset border
+========================================================================== */
+
+
+.border-box {
+  border: 1px solid $darkGray;
+  padding: 20px 0 30px;
+  &.no-top {
+    border-top: none;
+    .inline-border {
+      top: -28px;
+    }
+  }
+  .row {
+    margin-bottom: 0;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .img-wrap {
+    height: 170px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 20px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

@@ -13,8 +13,8 @@
 
 
 /**** import elements ****/
-@import "elements/buttons", "elements/icons", "elements/font-awesome", "elements/callout", "elements/outline-box";
-@import "elements/tabs", "elements/slider";
+@import "elements/buttons", "elements/icons", "elements/font-awesome", "elements/callout";
+@import "elements/outline-box", "elements/border-box", "elements/tabs", "elements/slider";
 
 
 /**** import sections ****/
@@ -22,7 +22,7 @@
 
 
 /**** import pages ****/
-@import "pages/home", "pages/search", "pages/product-detail";
+@import "pages/home", "pages/search", "pages/product-detail", "pages/listing-posted";
 
 
 /**** import animations ****/
