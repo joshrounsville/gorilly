@@ -5,6 +5,7 @@
 
 
 .product-nav {
+  animation: fadeIn .3s 1s both;
   a {
     @include oswald();
     font-size: 12px;
