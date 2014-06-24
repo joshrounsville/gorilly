@@ -1,0 +1,68 @@
+/* ==========================================================================
+  Social Bar
+========================================================================== */
+
+
+.social-bar {
+  border: 1px solid $darkGray;
+  padding: 14px 4px;
+  text-align: center;
+  display: block;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 1;
+    @include oswald();
+    &.share {
+      h4 {
+        top: 1px;
+      }
+    }
+    &:first-of-type {
+      margin: 0 10px 0 0;
+    }
+    &:last-of-type {
+      margin: 0 0 0 10px;
+    }
+  }
+  a {
+    color: $darkGray;
+    img {
+      transform: scale(0.9);
+      transition: transform .15s ease-in-out;
+    }
+    &:hover,
+    &:focus {
+      color: $green;
+      i {
+        img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  h4 {
+    color: $green;
+    text-transform: none;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    top: -1px;
+    a {
+      color: $green;
+    }
+  }
+  input {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &[type=email] {
+      padding: 10px;
+      margin-right: 10px;
+      width: 190px;
+      border-width: 2px;
+    }
+  }
+}

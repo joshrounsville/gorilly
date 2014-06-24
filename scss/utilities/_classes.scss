@@ -13,6 +13,18 @@
   }
 }
 
+.list-spacer-horz {
+  li {
+    margin: 0 20px;
+  }
+}
+
+.list-middle {
+  li {
+    vertical-align: middle;
+  }
+}
+
 
 /**** **** **** **** ****
   Borders
@@ -137,6 +149,10 @@
 
 .flex-b-align {
   align-items: flex-end;
+}
+
+.middle {
+  vertical-align: middle;
 }
 
 

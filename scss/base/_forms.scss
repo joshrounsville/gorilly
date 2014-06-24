@@ -348,6 +348,34 @@ textarea {
     text-transform: uppercase;
     font-style: italic;
   }
+
+  &.form-green {
+    background: $lightGreen;
+    .form-row {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+      position: relative;
+    }
+    h3 {
+      color: $darkGray;
+      font-style: normal;
+      margin: 0;
+    }
+    label {
+      top: 22px;
+      left: 15px;
+      position: absolute;
+      @include oswald();
+    }
+    input {
+      &:not(.btn) {
+        border: none;
+        width: 100%;
+        padding: 22px 20px 22px 130px;
+      }
+    }
+  }
 }
 
 
