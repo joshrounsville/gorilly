@@ -28,14 +28,14 @@ footer {
 
 .nav-footer {
   float: left;
-  width: 50%;
+  width: 60%;
   @include clearfix();
   li {
     display: block;
-    width: 32%;
+    width: 25%;
     float: left;
     margin-bottom: 12px;
-    &:nth-child(-n+3) {
+    &:nth-child(-n+4) {
       @include ptSerifBold();
     }
   }
@@ -48,7 +48,7 @@ footer {
 }
 
 .nav-footer-social {
-  width: 25%;
+  width: 20%;
   float: left;
   li {
     display: inline-block;
@@ -87,7 +87,7 @@ footer {
 .mailing-list {
   display: block;
   float: right;
-  width: 25%;
+  width: 20%;
   font-size: 14px;
   position: relative;
   input {

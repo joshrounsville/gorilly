@@ -370,9 +370,13 @@ textarea {
     }
     input {
       &:not(.btn) {
-        border: none;
+        border: 1px solid #fff;
         width: 100%;
         padding: 22px 20px 22px 130px;
+        &:hover,
+        &:focus {
+          border-color: $green;
+        }
       }
     }
   }
