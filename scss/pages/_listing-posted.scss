@@ -38,7 +38,7 @@
   h4 {
     @include oswald();
     span {
-      @include playfairBold();
+      @include millerBold();
       font-size: 50px;
       margin: 0 10px 0 -85px;
     }

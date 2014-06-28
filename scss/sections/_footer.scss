@@ -4,7 +4,6 @@
 
 
 footer {
-  @include ptSerif();
   font-size: 12px;
   text-transform: uppercase;
   color: #fff;
@@ -36,7 +35,7 @@ footer {
     float: left;
     margin-bottom: 12px;
     &:nth-child(-n+4) {
-      @include ptSerifBold();
+      @include millerBold();
     }
   }
 
@@ -62,7 +61,7 @@ footer {
     height: 34px;
     font-size: 20px;
     text-align: center;
-    padding-top: 3px;
+    padding: 5px 0 0 0;
     border-radius: 100%;
     &:hover,
     &:focus {

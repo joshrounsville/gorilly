@@ -128,8 +128,12 @@
   color: $orange;
 }
 
-.pt-serif {
-  @include ptSerif();
+.text-muted {
+  color: #9B9B9B;
+}
+
+.miller {
+  @include miller();
 }
 
 

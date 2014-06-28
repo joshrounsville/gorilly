@@ -291,7 +291,7 @@ textarea {
         margin: 0 0 10px;
       }
       span {
-        @include ptSerifCaption();
+        @include miller();
         color: $darkGray;
         font-size: 16px;
         margin: 0 0 0 10px;
@@ -324,7 +324,7 @@ textarea {
     }
   }
   h3 {
-    @include ptSerif();
+    @include miller();
     font-style: italic;
   }
   label {
@@ -379,6 +379,53 @@ textarea {
         }
       }
     }
+  }
+}
+
+.form-modal {
+  h5, label {
+    @include oswald();
+    color: $darkGray;
+    text-align: center;
+    display: block;
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+  h6 {
+    @include oswald();
+    margin: 10px 0 0 16%;
+  }
+  input,
+  textarea {
+    width: 100%;
+    &[type=submit] {
+      width: 40%;
+      margin: auto;
+      display: block;
+    }
+  }
+  .form-row {
+    margin-bottom: 25px;
+  }
+  .form-el-wrap {
+    label {
+      color: $green;
+      font-size: 12px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 15%;
+      margin: 0;
+      text-align: right;
+      padding-right: 10px;
+    }
+    input {
+      display: inline-block;
+      vertical-align: middle;
+      width: 84%;
+    }
+  }
+  .inner-row {
+    margin: 0 0 5px;
   }
 }
 

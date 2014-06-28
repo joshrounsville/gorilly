@@ -123,27 +123,67 @@ $(function() {
 
 
   // img swapper on product detail page
-  var mainImgWrap = $('div.img-large');
-  var mainImg = $(mainImgWrap).find('img');
-  var thumbImgs = $('ul.img-thumbs').find('img');
-  var mainSrc;
-  var thumbSrc;
+  var imgSwapper = function() {
 
-  thumbImgs.on('click', function() {
-    mainSrc = $(mainImg).attr('src');
-    thumbSrc = $(this).attr('src');
+    var mainImgWrap = $('div.img-large');
+    var mainImg = $(mainImgWrap).find('img');
+    var thumbImgs = $('ul.img-thumbs').find('img');
+    var mainSrc;
+    var thumbSrc;
 
-    if ( mainSrc != thumbSrc ) {
-      mainImgWrap.addClass('loading');
-      mainImg.attr('src', thumbSrc);
+    thumbImgs.on('click', function() {
+      mainSrc = $(mainImg).attr('src');
+      thumbSrc = $(this).attr('src');
 
-      setTimeout(function() {
-        mainImgWrap.removeClass('loading');
-      }, 500);
+      if ( mainSrc != thumbSrc ) {
+        mainImgWrap.addClass('loading');
+        mainImg.attr('src', thumbSrc);
 
-    }
+        setTimeout(function() {
+          mainImgWrap.removeClass('loading');
+        }, 300);
 
+      }
+
+    });
+
+  };
+
+  imgSwapper();
+
+
+
+
+  // bootstrap affix
+  var affixEl = $('.affix-el');
+  var affix = function() {
+    var top = affixEl.offset().top - 20;
+
+    affixEl.affix({
+      offset: {
+        top: top
+      }
+    });
+
+  };
+
+  if ( affixEl.length ) {
+    affix();
+  }
+
+
+
+
+  // bootstrap modal
+  var modalLink = $('.modal-link');
+  modalLink.on('click', function(e) {
+    e.preventDefault();
+
+    var target = $(modalLink).attr('href');
+    $(target).modal()
   });
+
+
 
 
 

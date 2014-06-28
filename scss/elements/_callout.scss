@@ -10,7 +10,7 @@
     top: 20%;
     left: 0;
     font-size: 65px;
-    @include playfairBold();
+    @include millerBold();
     color: $green;
     line-height: 1.25;
     span {

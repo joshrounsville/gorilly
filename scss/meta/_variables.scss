@@ -26,132 +26,25 @@ $linkHover: $darkGray;
   text-transform: uppercase;
 }
 
-@mixin playfairBold() {
-  font-family: 'Playfair Display', serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@mixin playfairBlack() {
-  font-family: 'Playfair Display', serif;
-  font-style: normal;
-  font-weight: 900;
-}
-
-@mixin ptSerif() {
-  font-family: 'PT Serif', serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@mixin ptSerifBold() {
-  font-family: 'PT Serif', serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@mixin ptSerifCaption() {
-  font-family: 'PT Serif Caption', serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-
-.millerbannerblack {
-  font-family: "Miller Banner Black";
-  font-style: normal;
-  font-weight: normal;
-}
-
-.millerbannerblack {
-  font-family: "Miller Banner Black";
-  font-style: normal;
-  font-weight: normal;
-}
-
-.millerbannerblackitalic {
-  font-family: "Miller Banner Black";
-  font-style: italic;
-  font-weight: normal;
-}
-
-.millerbannerbold {
-  font-family: "Miller Banner";
+@mixin millerBold() {
+  font-family: "Miller Banner", serif;
   font-style: normal;
   font-weight: bold;
 }
 
-.millerbannerbold {
-  font-family: "Miller Banner";
-  font-style: normal;
-  font-weight: bold;
-}
-
-.millerbannerbolditalic {
-  font-family: "Miller Banner";
-  font-style: italic;
-  font-weight: bold;
-}
-
-.millerbanneritalic {
-  font-family: "Miller Banner";
+@mixin millerItalic() {
+  font-family: "Miller Banner", serif;
   font-style: italic;
   font-weight: normal;
 }
 
-.millerbannerlight {
-  font-family: "Miller Banner Light";
+@mixin miller() {
+  font-family: "Miller Banner", serif;
   font-style: normal;
   font-weight: normal;
 }
 
-.millerbannerlight {
-  font-family: "Miller Banner Light";
-  font-style: normal;
-  font-weight: normal;
-}
 
-.millerbannerlightitalic {
-  font-family: "Miller Banner Light";
-  font-style: italic;
-  font-weight: normal;
-}
-
-.millerbannerlightitalic {
-  font-family: "Miller Banner Light";
-  font-style: italic;
-  font-weight: normal;
-}
-
-.millerbannerroman {
-  font-family: "Miller Banner";
-  font-style: normal;
-  font-weight: normal;
-}
-
-.millerbannerroman {
-  font-family: "Miller Banner";
-  font-style: normal;
-  font-weight: normal;
-}
-
-.millerbannersemibold {
-  font-family: "Miller Banner Semibold";
-  font-style: normal;
-  font-weight: normal;
-}
-
-.millerbannersemibold {
-  font-family: "Miller Banner Semibold";
-  font-style: normal;
-  font-weight: normal;
-}
-
-.millerbannersemibolditalic {
-  font-family: "Miller Banner Semibold";
-  font-style: italic;
-  font-weight: normal;
-}
 
 
 

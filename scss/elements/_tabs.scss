@@ -23,7 +23,7 @@
     @include oswald();
     font-size: 12px;
     border-bottom: 9px solid $green;
-    padding: 4px 0 5px;
+    padding: 5px 0;
     &.active {
       color: $darkGray;
       border-bottom: 9px solid $yellow;
@@ -32,7 +32,7 @@
       }
     }
     span {
-      @include playfairBlack();
+      @include millerBold();
       font-size: 25px;
       margin: 0 7px 0 0;
       transition: color .2s ease-in-out;

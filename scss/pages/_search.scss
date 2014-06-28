@@ -13,19 +13,18 @@
     position: relative;
     @include clearfix();
     margin: 0 0 15px;
-    &:nth-of-type(even) {
-      .meta {
-        li {
-          &.count {
-            background: $orange;
-          }
-        }
+    transition: border .3s ease-in-out;
+    &:hover {
+      border-color: $orange;
+      .img-wrap {
+        border-color: $orange;
       }
     }
   }
   .img-wrap {
     float: left;
     border-right: 1px solid $darkGray;
+    transition: border .3s ease-in-out;
   }
   .content-wrap {
     padding: 10px 20px;
@@ -39,17 +38,20 @@
       display: inline-block;
       margin: 0 0 0 7px;
       font-size: 12px;
-      @include ptSerifBold();
+      @include millerBold();
       &.count {
         background: $green;
         color: #fff;
         padding: 4px 8px;
         font-size: 18px;
+        &.anywhere {
+          background: $orange;
+        }
       }
     }
   }
   h5 {
-    @include ptSerifBold();
+    @include millerBold();
     position: relative;
     margin: 10px 0 10px 0;
     &:after {
@@ -62,7 +64,7 @@
     }
   }
   p {
-    @include ptSerifBold();
+    @include millerBold();
     font-size: 16px;
     margin: 0 0 15px;
   }
@@ -78,12 +80,16 @@
 }
 
 .search-results-map {
-  margin: 0 0 15px;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
+  &.affix {
+    position: fixed;
+    top: 20px;
+  }
 }
 
 .search-results-map-key {
+  margin: 0 0 15px;
   border: 1px solid $darkGray;
   padding: 15px;
   font-size: 12px;
