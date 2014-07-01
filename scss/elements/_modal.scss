@@ -85,14 +85,14 @@
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: #fff;
   &.fade {
     opacity: 0;
     filter: alpha(opacity=0);
   }
   &.in {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.6;
+    filter: alpha(opacity=60);
   }
 }
 

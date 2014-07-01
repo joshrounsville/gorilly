@@ -37,7 +37,7 @@
             <nav class="nav-main">
               <ul>
                 <li><a href="/sign-up/" class="highlight">Sign Up</a></li>
-                <li><a href="/login/" class="highlight">Login</a></li>
+                <li><a href="#login-modal" class="highlight modal-link">Login</a></li>
                 <li><a href="/about-us/">About Us</a></li>
                 <li><a href="/how-it-works/">How it Works</a></li>
                 <li><a href="/list-a-product/" class="btn btn-outline">List a Product</a></li>
@@ -256,7 +256,7 @@
             <nav class="nav-footer">
               <ul>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">How Does It</a></li>
+                <li><a href="#">How it Works</a></li>
                 <li><a href="#">Suggest a Product</a></li>
                 <li><a href="#">View FAQ</a></li>
                 <li><a href="#">Terms of Service</a></li>
@@ -287,6 +287,37 @@
         </div>
       </div>
     </footer>
+
+
+    <div class="modal fade" id="login-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
+          <div class="modal-body">
+            <h4>Log in to your account to get started:</h4>
+            <form action="#" class="form-modal form-login">
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+              </div>
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+              </div>
+              <div class="form-row">
+                <ul class="btn-list">
+                  <li><input type="submit" value="Log In" class="btn"></li>
+                  <li class="spacer">Or</li>
+                  <li><input type="submit" value="Create an Account" class="btn btn-outline"></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

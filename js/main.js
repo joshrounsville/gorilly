@@ -179,8 +179,8 @@ $(function() {
   modalLink.on('click', function(e) {
     e.preventDefault();
 
-    var target = $(modalLink).attr('href');
-    $(target).modal()
+    var target = $(this).attr('href');
+    $(target).modal();
   });
 
 

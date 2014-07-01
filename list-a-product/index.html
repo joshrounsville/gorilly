@@ -192,6 +192,8 @@
                     <div class="form-row form-row-bottom">
                       <a href="#" class="btn btn-post btn-form">Post</a>
                       <a href="#" class="btn btn-green btn-form btn-edit">Edit</a>
+
+                      <a href="#payment-modal" class="btn modal-link">Show Payment Modal</a>
                     </div>
                   </div>
                 </div>
@@ -207,29 +209,41 @@
           <div class="span8 offset2">
 
             <div class="listing-posted">
-              <h3 class="tag">You're done!</h3>
+              <h3 class="corner-tag">Your listing is live!</h3>
               <ul class="listing-details">
                 <li>
-                  <h4><span>01.</span> You succesfully created a new listing</h4>
+                  <div class="img-wrap">
+                    <img src="/img/illustrations/create-a-listing-small.png" alt="Create a Listing illustration" width="159" height="116">
+                  </div>
                   <div class="details">
+                    <h4>You succesfully created a new listing</h4>
                     <p>Your listing is now live. To edit your listing go to: <a href="#">My Listing &amp; Codes</a></p>
                   </div>
                 </li>
                 <li>
-                  <h4><span>02.</span> Respond to shopper inquiries</h4>
+                  <div class="img-wrap">
+                    <img src="/img/illustrations/respond-small.png" alt="Respond illustration" width="91" height="96">
+                  </div>
                   <div class="details">
+                    <h4>Respond to shopper inquiries</h4>
                     <p>You will receive notice when shoppers are interested in your listing. Respond to messages to set up a convenient time and place to show your product.</p>
                   </div>
                 </li>
                 <li>
-                  <h4><span>03.</span> Connect with shoppers and provide unique promotion codes</h4>
+                  <div class="img-wrap">
+                    <img src="/img/illustrations/connect-small.png" alt="Connect illustration" width="179" height="153">
+                  </div>
                   <div class="details">
+                    <h4>Connect with shoppers and provide unique promotion codes</h4>
                     <p>Connect with shoppers and provide them with the unique promotion code sent to you by Gorilly.</p>
                   </div>
                 </li>
                  <li>
-                  <h4><span>04.</span> Get paid</h4>
+                  <div class="img-wrap">
+                    <img src="/img/illustrations/get-paid-small.png" alt="Get Paid illustration" width="90" height="83">
+                  </div>
                   <div class="details">
+                    <h4>Get paid</h4>
                     <p>When shoppers buy products using the promotion codes you provided to them, Gorilly pays you using your preferred payment method.</p>
                   </div>
                 </li>
@@ -252,7 +266,7 @@
             <nav class="nav-footer">
               <ul>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">How Does It</a></li>
+                <li><a href="#">How it Works</a></li>
                 <li><a href="#">Suggest a Product</a></li>
                 <li><a href="#">View FAQ</a></li>
                 <li><a href="#">Terms of Service</a></li>
@@ -283,6 +297,76 @@
         </div>
       </div>
     </footer>
+
+
+    <div class="modal fade" id="login-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
+          <div class="modal-body">
+            <h4>Log in to your account to get started:</h4>
+            <form action="#" class="form-modal form-login">
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+              </div>
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+              </div>
+              <div class="form-row">
+                <ul class="btn-list">
+                  <li><input type="submit" value="Log In" class="btn"></li>
+                  <li class="spacer">Or</li>
+                  <li><input type="submit" value="Create an Account" class="btn btn-outline"></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="payment-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
+          <div class="modal-body">
+            <h4>Please choose how you would like to get paid (you only have to do this once)</h4>
+            <form action="#" class="form-modal form-payment">
+              <div class="form-row">
+                <ul class="radio-list list-inline text-center">
+                  <li>
+                    <label for="paypal">
+                      <img src="/img/logos/paypal.png" alt="Paypal logo" width="120" height="31">
+                    </label>
+                    <input type="radio" name="payment" id="paypal" value="Paypal">
+                  </li>
+                  <li>
+                    <label for="venmor">
+                      <img src="/img/logos/venmo.png" alt="Venmo logo" width="120" height="23">
+                    </label>
+                    <input type="radio" name="payment" id="venmor" value="Venmo">
+                  </li>
+                  <li>
+                    <label for="check">Get Paid by Check</label>
+                    <input type="radio" name="payment" id="check" value="Check">
+                  </li>
+                </ul>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Log In" class="btn">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

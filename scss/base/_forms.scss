@@ -116,6 +116,62 @@ textarea {
     bottom: 20px;
     left: 0;
   }
+  .spacer {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+  }
+  .radio-list {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+    label {
+      width: auto;
+      display: inline;
+      margin: 0 7px 0 0;
+      bottom: -3px;
+      position: relative;
+    }
+    input[type=radio] {
+      width: auto;
+      border-radius: 0;
+      -webkit-appearance: none;
+      display: block;
+      background: #fff;
+      padding: 0;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: " ";
+        display: none;
+        width: 32px;
+        height: 32px;
+        left: 1px;
+        bottom: 2px;
+        background: url(/img/icons/check.svg) no-repeat center center;
+        background-size: 100%;
+        animation: fadeIn .2s both;
+      }
+      &:checked {
+        &:after {
+          display: block;
+        }
+      }
+      .no-svg & {
+        &:after {
+          background: url(/img/icons/check.png) no-repeat center center;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
 }
 
 .form-general {
@@ -206,60 +262,10 @@ textarea {
         border-left: 1px solid $lightGray;
       }
     }
-    &:focus {
+    &:hover {
       + .inline-label {
         i {
-          transform: rotate(180deg);
-        }
-      }
-    }
-  }
-  .radio-list {
-    text-align: center;
-    li {
-      display: inline-block;
-      margin: 0 20px;
-    }
-    label {
-      width: auto;
-      display: inline;
-      margin: 0 7px 0 0;
-      bottom: -3px;
-      position: relative;
-    }
-    input[type=radio] {
-      width: auto;
-      border-radius: 0;
-      -webkit-appearance: none;
-      display: block;
-      background: #fff;
-      padding: 0;
-      width: 28px;
-      height: 28px;
-      cursor: pointer;
-      position: relative;
-      &:after {
-        position: absolute;
-        content: " ";
-        display: none;
-        width: 32px;
-        height: 32px;
-        left: 1px;
-        bottom: 2px;
-        background: url(/img/icons/check.svg) no-repeat center center;
-        background-size: 100%;
-        animation: fadeIn .2s both;
-      }
-      &:checked {
-        &:after {
-          display: block;
-        }
-      }
-      .no-svg & {
-        &:after {
-          background: url(/img/icons/check.png) no-repeat center center;
-          width: 40px;
-          height: 40px;
+          transform: translateY(3px);
         }
       }
     }
@@ -328,7 +334,7 @@ textarea {
     font-style: italic;
   }
   label {
-    font-style: italic;
+    @include millerItalic();
     margin: 0 0 5px;
     display: block;
   }
@@ -342,11 +348,6 @@ textarea {
   textarea {
     margin: 0 auto;
     width: 90%;
-  }
-  .spacer {
-    margin: 20px 0;
-    text-transform: uppercase;
-    font-style: italic;
   }
 
   &.form-green {
@@ -403,6 +404,9 @@ textarea {
       margin: auto;
       display: block;
     }
+    &.btn {
+      padding: 15px 0;
+    }
   }
   .form-row {
     margin-bottom: 25px;
@@ -426,6 +430,46 @@ textarea {
   }
   .inner-row {
     margin: 0 0 5px;
+  }
+}
+
+.form-login {
+  padding-right: 130px;
+  padding-left: 130px;
+  text-align: center;
+  label {
+    @include millerItalic();
+    margin: 0 0 5px;
+    display: block;
+    text-transform: none;
+    font-size: 16px;
+  }
+  input {
+    &.btn {
+      width: 100%;
+    }
+  }
+}
+
+.form-payment {
+  .radio-list {
+    img {
+      vertical-align: top;
+    }
+    label {
+      display: block;
+      bottom: auto;
+      height: 40px;
+      margin: 10px auto 15px;
+    }
+    input {
+      &[type=radio] {
+        border-radius: 100%;
+        background: $paleYellow;
+        border: 2px solid $green;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
