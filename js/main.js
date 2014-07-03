@@ -7,41 +7,12 @@ $(function() {
   var notDesktop = body.css('margin-bottom') === '1px';
 
 
-
-  // setup request animation frame shim
-  (function() {
-    var lastTime = 0;
-    var vendors = ['ms', 'moz', 'webkit', 'o'];
-    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
-    }
-
-    if (!window.requestAnimationFrame)
-        window.requestAnimationFrame = function(callback, element) {
-            var currTime = new Date().getTime();
-            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-              timeToCall);
-            lastTime = currTime + timeToCall;
-            return id;
-        };
-
-    if (!window.cancelAnimationFrame)
-        window.cancelAnimationFrame = function(id) {
-            clearTimeout(id);
-        };
-  }());
-
-
-
   // svg fallback
   if ( !Modernizr.svg ) {
     $('img[src*="svg"]').attr('src', function() {
       return $(this).attr('src').replace('.svg', '.png');
     });
   }
-
 
 
 
@@ -165,6 +136,7 @@ $(function() {
 
 
   // img swapper on product detail page
+
   var imgSwapper = function() {
 
     var mainImgWrap = $('div.img-large');
@@ -197,11 +169,13 @@ $(function() {
 
 
   // bootstrap affix
+
   var affixEl = $('.affix-el');
 
   var affix = function() {
+    var dataTop = affixEl.attr('data-top');
     var top = affixEl.offset().top;
-        top = top - parseInt(affixEl.css('top'));
+        top = top - parseInt(dataTop, 10);
     var bodyHeight = body.height();
     var affixBottom = $('.affix-el-bottom');
     var affixBottomOffset = affixBottom.offset().top;
@@ -224,31 +198,31 @@ $(function() {
 
 
   // form scroll craziness
+
   var formEl = $('div.form-scroll');
-  var windowPosition;
-  var formElPosition;
 
   var formScroll = function() {
+    var formHeight = formEl.offset().top;
+    var windowPosition;
+    var formElPosition;
 
-    windowPosition = $(window).scrollTop() + 20;
-    formElPosition = windowPosition - parseInt(formHeight);
+    $(window).on('scroll', function() {
 
-    if ( windowPosition > formHeight ) {
-      formEl.css('top', formElPosition);
-    } else {
-      formEl.css('top', 0);
-    }
+      windowPosition = $(window).scrollTop() + 20;
+      formElPosition = windowPosition - parseInt(formHeight);
+
+      if ( windowPosition > formHeight ) {
+        formEl.css('transform', 'translateY(' + formElPosition + 'px)').addClass('sticky');
+      } else {
+        formEl.css('transform', 'translateY(0)' ).removeClass('sticky');
+      }
+
+    });
 
   };
 
-  if ( $('div.form-scroll').length ) {
-    var formHeight = formEl.offset().top;
-
+  if ( formEl.length ) {
     formScroll();
-
-    $(window).on('scroll', function() {
-      window.requestAnimationFrame(formScroll);
-    });
   }
 
 
