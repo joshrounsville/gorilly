@@ -205,3 +205,8 @@
 .clearfix {
   @include clearfix();
 }
+
+.on-top {
+  position: relative;
+  z-index: 1000;
+}

@@ -3,9 +3,11 @@
 ========================================================================== */
 
 
+
 .search-results-list {
   display: block;
   width: 100%;
+  padding-right: 10px;
   > li {
     display: block;
     width: 100%;
@@ -64,7 +66,6 @@
     }
   }
   p {
-    @include millerBold();
     font-size: 16px;
     margin: 0 0 15px;
   }
@@ -79,14 +80,34 @@
   }
 }
 
-.search-results-map {
-  height: 400px;
-  overflow: hidden;
+.map-wrap {
+  top: 100px;
   &.affix {
     position: fixed;
-    top: 20px;
+  }
+  &.affix-bottom {
+    top: auto;
+    position: relative;
   }
 }
+
+.form-scroll {
+  position: relative;
+  background: #fff;
+  z-index: 100;
+  &:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    height: 20px;
+    right: 0;
+    top: -20px;
+    left: 0;
+  }
+}
+
 
 .search-results-map-key {
   margin: 0 0 15px;

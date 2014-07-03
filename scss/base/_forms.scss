@@ -331,7 +331,6 @@ textarea {
   }
   h3 {
     @include miller();
-    font-style: italic;
   }
   label {
     @include millerItalic();

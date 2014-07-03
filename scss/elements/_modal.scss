@@ -72,7 +72,7 @@
   }
   h4 {
     font-size: 30px;
-    @include millerItalic();
+    @include miller();
     text-align: center;
     margin: 30px 0;
   }

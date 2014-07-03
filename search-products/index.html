@@ -14,7 +14,8 @@
 
     <link rel="icon" type="image/png" href="/img/structure/favicon.png">
 
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:700,900|PT+Serif+Caption|PT+Serif:400,700|Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="//cloud.webtype.com/css/789fa1fe-a2e3-4672-bd0c-2b28a2c414ca.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="/css/styles.css">
 
@@ -55,43 +56,48 @@
     <section>
       <div class="container">
 
-        <div class="row">
+        <div class="row text-center mar-b--0">
+          <div class="span12">
+            <h2>Select a brand and enter your location:</h2>
+          </div>
+        </div>
+
+        <div class="row mar-b--20 on-top">
           <div class="span12">
 
-            <form action="#" class="form-general">
-              <div class="form-row text-center">
-                <h2>Select a brand and enter your location:</h2>
-              </div>
-               <div class="form-row">
-                <div class="one-third">
-                  <div class="select-wrap">
-                    <select name="select-brand" id="select-brand">
-                      <option value="">Select a Brand</option>
-                      <option value="first">First Brand</option>
-                      <option value="second">Second Brand</option>
-                      <option value="third">Brand Number Three</option>
-                      <option value="fourth">Last Brand</option>
-                    </select>
-                    <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
+            <div class="form-scroll">
+              <form action="#" class="form-general">
+                 <div class="form-row">
+                  <div class="one-third">
+                    <div class="select-wrap">
+                      <select name="select-brand" id="select-brand">
+                        <option value="">Select a Brand</option>
+                        <option value="first">First Brand</option>
+                        <option value="second">Second Brand</option>
+                        <option value="third">Brand Number Three</option>
+                        <option value="fourth">Last Brand</option>
+                      </select>
+                      <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
+                    </div>
+                  </div>
+                  <div class="one-third">
+                    <div class="select-wrap">
+                      <select name="select-brand" id="select-brand">
+                        <option value="">Zip Code or Neighborhood</option>
+                        <option value="first">First Brand</option>
+                        <option value="second">Second Brand</option>
+                        <option value="third">Brand Number Three</option>
+                        <option value="fourth">Last Brand</option>
+                      </select>
+                      <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
+                    </div>
+                  </div>
+                  <div class="one-third border">
+                    <input type="submit" value="Search" class="btn btn-full">
                   </div>
                 </div>
-                <div class="one-third">
-                  <div class="select-wrap">
-                    <select name="select-brand" id="select-brand">
-                      <option value="">Zip Code or Neighborhood</option>
-                      <option value="first">First Brand</option>
-                      <option value="second">Second Brand</option>
-                      <option value="third">Brand Number Three</option>
-                      <option value="fourth">Last Brand</option>
-                    </select>
-                    <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
-                  </div>
-                </div>
-                <div class="one-third border">
-                  <input type="submit" value="Search" class="btn btn-full">
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
 
           </div>
         </div>
@@ -104,13 +110,14 @@
 
         <div class="row mar-b--10">
           <div class="span12">
-            <h5 class="text-dark-gray miller">3 total results</h5>
+            <h5 class="text-dark-gray miller">20 total results</h5>
           </div>
         </div>
 
         <div class="row">
           <div class="span7">
-            <ul class="search-results-list">
+
+            <ul class="search-results-list affix-el-bottom">
               <li>
                 <div class="img-wrap">
                   <img src="/img/products/hat-thumb.jpg" alt="Placeholder">
@@ -223,17 +230,227 @@
                   <a href="/product/product-1/">View This Item</a>
                 </div>
               </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrap">
+                  <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                </div>
+                <div class="content-wrap">
+                  <div class="meta">
+                    <ul>
+                      <li>Sunset District</li>
+                      <li class="count anywhere">3</li>
+                    </ul>
+                  </div>
+                  <h5>03. Topo Design</h5>
+                  <p>Red Nylon Camp hat - 2 years old and still looks great!</p>
+                  <a href="/product/product-1/">View This Item</a>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="span5">
-            <div class="search-results-map-key">
-              <ul>
-                <li><i class="fa fa-circle text-orange"></i> Willing to show product in other parts of SF</li>
-                <li><i class="fa fa-circle text-green"></i> Only showing in this neighborhood</li>
-              </ul>
-            </div>
-            <div class="search-results-map affix-el">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101000.50292243659!2d-122.42901693115233!3d37.713440365845116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1403933488508" width="458" height="400" frameborder="0" style="border:0"></iframe>
+            <div class="map-wrap affix-el">
+              <div class="search-results-map-key">
+                <ul>
+                  <li><i class="fa fa-circle text-orange"></i> Willing to show product in other parts of SF</li>
+                  <li><i class="fa fa-circle text-green"></i> Only showing in this neighborhood</li>
+                </ul>
+              </div>
+              <div class="search-results-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101000.50292243659!2d-122.42901693115233!3d37.713440365845116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1403933488508" width="458" height="400" frameborder="0" style="border:0"></iframe>
+              </div>
             </div>
           </div>
         </div>

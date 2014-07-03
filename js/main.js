@@ -7,6 +7,34 @@ $(function() {
   var notDesktop = body.css('margin-bottom') === '1px';
 
 
+
+  // setup request animation frame shim
+  (function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+  }());
+
+
+
   // svg fallback
   if ( !Modernizr.svg ) {
     $('img[src*="svg"]').attr('src', function() {
@@ -43,6 +71,20 @@ $(function() {
     $sliderPrev.on('click', function(e) {
       e.preventDefault();
       $slider.slickPrev();
+    });
+
+    var $bigSlider = $('.slider-full');
+
+    $bigSlider.slick({
+      autoplay: true,
+      autoplaySpeed: 6000,
+      infinite: true,
+      speed: 400,
+      draggable: false,
+      arrows: false,
+      lazyLoad: 'ondemand',
+      dots: true,
+      fade: true
     });
 
   };
@@ -156,12 +198,20 @@ $(function() {
 
   // bootstrap affix
   var affixEl = $('.affix-el');
+
   var affix = function() {
-    var top = affixEl.offset().top - 20;
+    var top = affixEl.offset().top;
+        top = top - parseInt(affixEl.css('top'));
+    var bodyHeight = body.height();
+    var affixBottom = $('.affix-el-bottom');
+    var affixBottomOffset = affixBottom.offset().top;
+    var affixBottomHeight = affixBottom.height();
+    var bottom = bodyHeight - affixBottomHeight - affixBottomOffset;
 
     affixEl.affix({
       offset: {
-        top: top
+        top: top,
+        bottom: bottom
       }
     });
 
@@ -170,6 +220,37 @@ $(function() {
   if ( affixEl.length ) {
     affix();
   }
+
+
+
+  // form scroll craziness
+  var formEl = $('div.form-scroll');
+  var windowPosition;
+  var formElPosition;
+
+  var formScroll = function() {
+
+    windowPosition = $(window).scrollTop() + 20;
+    formElPosition = windowPosition - parseInt(formHeight);
+
+    if ( windowPosition > formHeight ) {
+      formEl.css('top', formElPosition);
+    } else {
+      formEl.css('top', 0);
+    }
+
+  };
+
+  if ( $('div.form-scroll').length ) {
+    var formHeight = formEl.offset().top;
+
+    formScroll();
+
+    $(window).on('scroll', function() {
+      window.requestAnimationFrame(formScroll);
+    });
+  }
+
 
 
 
