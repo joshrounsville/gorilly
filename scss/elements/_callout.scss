@@ -5,6 +5,17 @@
 
 .callout {
   position: relative;
+  &.callout-right {
+    h1 {
+      right: 0;
+      left: auto;
+      text-align: right;
+    }
+    .btn {
+      right: 16%;
+      left: auto;
+    }
+  }
   h1 {
     position: absolute;
     top: 20%;

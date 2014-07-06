@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="row mar-b--20 on-top">
+        <div class="row mar-b--20 on-top form-scroll-parent">
           <div class="span12">
 
             <div class="form-scroll">
@@ -70,26 +70,33 @@
                  <div class="form-row">
                   <div class="one-third">
                     <div class="select-wrap">
-                      <select name="select-brand" id="select-brand">
-                        <option value="">Select a Brand</option>
+                      <select name="select-brand" id="select-brand" class="select" data-placeholder="Select a Brand">
+                        <option value=""></option>
                         <option value="first">First Brand</option>
                         <option value="second">Second Brand</option>
                         <option value="third">Brand Number Three</option>
                         <option value="fourth">Last Brand</option>
                       </select>
-                      <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
                     </div>
                   </div>
                   <div class="one-third">
                     <div class="select-wrap">
-                      <select name="select-brand" id="select-brand">
-                        <option value="">Zip Code or Neighborhood</option>
-                        <option value="first">First Brand</option>
-                        <option value="second">Second Brand</option>
-                        <option value="third">Brand Number Three</option>
-                        <option value="fourth">Last Brand</option>
+                      <select name="select-brand" id="select-brand" class="select" data-placeholder="Zip Code or Neighborhood">
+                        <option value=""></option>
+                        <optgroup label="Zip Code">
+                          <option value="1">12345</option>
+                          <option value="2">23456</option>
+                          <option value="3">34567</option>
+                          <option value="4">45678</option>
+                          <option value="5">56789</option>
+                        </optgroup>
+                        <optgroup label="Neighborhood">
+                          <option value="first">First Neighborhood</option>
+                          <option value="second">Second Neighborhood</option>
+                          <option value="third">Neighborhood Number Three</option>
+                          <option value="fourth">Neighborhood Brand</option>
+                        </optgroup>
                       </select>
-                      <label for="select-brand" class="inline-label"><i class="fa fa-chevron-down"></i></label>
                     </div>
                   </div>
                   <div class="one-third border">
@@ -110,7 +117,7 @@
 
         <div class="row mar-b--10">
           <div class="span12">
-            <h5 class="text-dark-gray miller">20 total results</h5>
+            <h5 class="text-dark-gray miller">1-20 of 58 total results</h5>
           </div>
         </div>
 
@@ -439,17 +446,28 @@
                 </div>
               </li>
             </ul>
+            <nav class="nav-pagination">
+              <ul>
+                <li><a href="#" class="prev">Previous</a></li>
+                <li><a href="#" class="current">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" class="next">Next</a></li>
+              </ul>
+            </nav>
           </div>
           <div class="span5">
             <div class="map-wrap affix-el" data-top="100">
+              <div class="search-results-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101000.50292243659!2d-122.42901693115233!3d37.713440365845116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1403933488508" width="458" height="400" frameborder="0" style="border:0"></iframe>
+              </div>
               <div class="search-results-map-key">
                 <ul>
                   <li><i class="fa fa-circle text-orange"></i> Willing to show product in other parts of SF</li>
                   <li><i class="fa fa-circle text-green"></i> Only showing in this neighborhood</li>
                 </ul>
-              </div>
-              <div class="search-results-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101000.50292243659!2d-122.42901693115233!3d37.713440365845116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1403933488508" width="458" height="400" frameborder="0" style="border:0"></iframe>
               </div>
             </div>
           </div>

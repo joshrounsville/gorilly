@@ -167,6 +167,13 @@ $(function() {
 
 
 
+  // fancy select menus via Chosen
+  var selectMenus = $('.select');
+  $(selectMenus).chosen({
+    disable_search_threshold: 100
+  });
+
+
 
   // bootstrap affix
 
@@ -212,9 +219,9 @@ $(function() {
       formElPosition = windowPosition - parseInt(formHeight);
 
       if ( windowPosition > formHeight ) {
-        formEl.css('transform', 'translateY(' + formElPosition + 'px)').addClass('sticky');
+        formEl.addClass('sticky');
       } else {
-        formEl.css('transform', 'translateY(0)' ).removeClass('sticky');
+        formEl.removeClass('sticky');
       }
 
     });
