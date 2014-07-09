@@ -246,7 +246,40 @@ $(function() {
   });
 
 
+  // img modal (for homepage)
+  var imgModal = $('.modal-img');
+  imgModal.on('click', function(e) {
+    e.preventDefault();
 
+    var target = $(this).attr('href');
+    var img = $(this).attr('data-img');
+        img = $('<img>', {src: img, alt: 'Gorilly Product Image' });
+
+    $(target).find('.modal-body').find('img').remove();
+    $(target).find('.modal-body').append(img);
+    $(target).modal();
+
+  });
+
+  //$('#payment-modal').modal('show');
+
+
+
+  // validate forms
+  var formValidate = $('form.validate');
+
+  $(formValidate).each(function() {
+
+    $(this).validate({
+      rules: {
+        password: 'required',
+        passwordMatch: {
+          equalTo: '#password'
+        }
+      }
+    });
+
+  });
 
 
 });
