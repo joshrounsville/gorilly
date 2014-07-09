@@ -32,7 +32,7 @@
 
             <a href="/" class="logo">
               <img src="/img/structure/gorilly.svg" alt="Gorilly" width="235" height="35">
-              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="16"></span>
+              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="12"></span>
             </a>
 
             <nav class="nav-main">
@@ -89,7 +89,7 @@
                 <time>01/04/14</time>
                 <h3>Red Nylon Camp hat - 2 years old and still looks great!</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit erat semper nisl pulvinar, sodales sollicitudin ipsum sollicitudin. Ut pellentesque sagittis purus auctor feugiat. Pellentesque fermentum a quam nec ullamcorper. Praesent quam elit, consectetur ut lobortis ac, dapibus non arcu.</p>
-                <a href="#contact-modal" class="btn modal-link">Contact Product Gorilly</a>
+                <a href="#contact-modal" class="btn btn-tall modal-link">Contact Product Gorilly</a>
               </div>
             </div>
             <div class="product-owner">
@@ -108,8 +108,8 @@
               </ul>
             </div>
             <ul class="product-links">
-              <li><a href="#" class="btn btn-green">Product Website</a></li>
-              <li><a href="#" class="btn btn-green">How it Works</a></li>
+              <li><a href="#" class="btn btn-small btn-green">Product Website</a></li>
+              <li><a href="#" class="btn btn-small btn-green">How it Works</a></li>
             </ul>
           </div>
         </div>
@@ -128,10 +128,10 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">How it Works</a></li>
                 <li><a href="#">Suggest a Product</a></li>
-                <li><a href="#">View FAQ</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Press</a></li>
               </ul>
             </nav>
@@ -168,26 +168,26 @@
             <h4>Contact Product Gorilly</h4>
             <form action="#" class="form-modal">
               <div class="form-row">
-                <h5>Your Info</h5>
+                <h5>Your Info*</h5>
                 <div class="form-el-wrap">
                   <div class="inner-row">
                     <label for="your-name">Your Name:</label>
-                    <input type="text" id="your-name" name="your-name" value="Heather">
+                    <input type="text" id="your-name" name="your-name" required>
                   </div>
                   <div class="inner-row">
                     <label for="your-email">Your Email:</label>
-                    <input type="email" id="your-email" name="your-email" value="heathersemail@gmail.com">
+                    <input type="email" id="your-email" name="your-email" required>
                   </div>
                   <h6 class="text-muted">Your email will not be displayed</h6>
                 </div>
               </div>
               <div class="form-row">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
+                <label for="subject">Subject*</label>
+                <input type="text" id="subject" name="subject" required>
               </div>
               <div class="form-row">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                <label for="message">Message*</label>
+                <textarea name="message" id="message" cols="30" rows="5" required></textarea>
               </div>
               <div class="form-row">
                 <input type="submit" class="btn" value="Send">
@@ -207,20 +207,20 @@
           <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
           <div class="modal-body">
             <h4>Log in to your account to get started:</h4>
-            <form action="#" class="form-modal form-login">
+            <form action="#" class="form-modal form-login validate">
               <div class="form-row">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required>
               </div>
               <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
               </div>
               <div class="form-row">
                 <ul class="btn-list">
                   <li><input type="submit" value="Log In" class="btn"></li>
                   <li class="spacer">Or</li>
-                  <li><input type="submit" value="Create an Account" class="btn btn-outline"></li>
+                  <li><a href="/sign-up/" class="btn btn-outline btn-regular">Create an Account</a></li>
                 </ul>
               </div>
             </form>

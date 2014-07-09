@@ -32,7 +32,7 @@
 
             <a href="/" class="logo">
               <img src="/img/structure/gorilly.svg" alt="Gorilly" width="235" height="35">
-              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="16"></span>
+              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="12"></span>
             </a>
 
             <nav class="nav-main">
@@ -92,7 +92,7 @@
                           <option value="fourth">Last Brand</option>
                         </select>
                       </div>
-                      <a href="#">Suggest a different product</a>
+                      <a href="#">Suggest a different product <i class="fa fa-long-arrow-right"></i></a>
                     </div>
                     <div class="form-row">
                       <label for="subject">Enter Subject</label>
@@ -149,14 +149,33 @@
                   <div class="tab-content">
                     <div class="form-row">
                       <p>Upload photos for your product listing:</p>
-                      <ul class="list-inline text-center">
+                      <ul class="list-inline list-spacer-horz text-center">
                         <li><a href="#" class="btn btn-green btn-narrow">From Product Website</a></li>
                         <li><a href="#" class="btn btn-green btn-narrow">From Your Computer</a></li>
                       </ul>
                       <ul class="thumbnails">
-                        <li><img src="/img/products/hat-thumb.jpg" alt="Placeholder"></li>
-                        <li><img src="/img/products/hat-thumb-2.jpg" alt="Placeholder"></li>
-                        <li><img src="/img/products/hat-thumb-3.jpg" alt="Placeholder"></li>
+                        <li>
+                          <img src="/img/products/hat-thumb.jpg" alt="Placeholder">
+                          <ul class="photo-settings">
+                            <li><input type="radio" name="main-photo" id="thumb-1"> <label for="thumb-1">Main Photo</label></li>
+                            <li><a href="#" class="delete"><i class="fa fa-times"></i> Delete Photo</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <img src="/img/products/hat-thumb-2.jpg" alt="Placeholder">
+                          <ul class="photo-settings">
+                            <li><input type="radio" name="main-photo" id="thumb-2"> <label for="thumb-2">Main Photo</label></li>
+                            <li><a href="#" class="delete"><i class="fa fa-times"></i> Delete Photo</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <img src="/img/products/hat-thumb-3.jpg" alt="Placeholder">
+                          <ul class="photo-settings">
+                            <li><input type="radio" name="main-photo" id="thumb-3"> <label for="thumb-3">Main Photo</label></li>
+                            <li><a href="#" class="delete"><i class="fa fa-times"></i> Delete Photo</a></li>
+                          </ul>
+                        </li>
+                        <li class="empty"></li>
                       </ul>
                     </div>
                     <div class="form-row form-row-bottom">
@@ -171,7 +190,7 @@
                 <div class="tab" data-tab="tab-4">
                   <div class="tab-header">
                     <a href="#" class="btn-back btn-form">Back</a>
-                    <h3>Review Your Post</h3>
+                    <h3>Review and Post</h3>
                   </div>
                   <div class="tab-content">
                     <div class="form-row">
@@ -268,10 +287,10 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">How it Works</a></li>
                 <li><a href="#">Suggest a Product</a></li>
-                <li><a href="#">View FAQ</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Press</a></li>
               </ul>
             </nav>
@@ -306,20 +325,20 @@
           <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
           <div class="modal-body">
             <h4>Log in to your account to get started:</h4>
-            <form action="#" class="form-modal form-login">
+            <form action="#" class="form-modal form-login validate">
               <div class="form-row">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required>
               </div>
               <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
               </div>
               <div class="form-row">
                 <ul class="btn-list">
                   <li><input type="submit" value="Log In" class="btn"></li>
                   <li class="spacer">Or</li>
-                  <li><input type="submit" value="Create an Account" class="btn btn-outline"></li>
+                  <li><a href="/sign-up/" class="btn btn-outline btn-regular">Create an Account</a></li>
                 </ul>
               </div>
             </form>

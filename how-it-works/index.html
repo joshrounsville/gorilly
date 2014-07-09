@@ -32,7 +32,7 @@
 
             <a href="/" class="logo">
               <img src="/img/structure/gorilly.svg" alt="Gorilly" width="235" height="35">
-              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="16"></span>
+              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="12"></span>
             </a>
 
             <nav class="nav-main">
@@ -76,10 +76,10 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">How it Works</a></li>
                 <li><a href="#">Suggest a Product</a></li>
-                <li><a href="#">View FAQ</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Press</a></li>
               </ul>
             </nav>
@@ -114,20 +114,20 @@
           <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
           <div class="modal-body">
             <h4>Log in to your account to get started:</h4>
-            <form action="#" class="form-modal form-login">
+            <form action="#" class="form-modal form-login validate">
               <div class="form-row">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required>
               </div>
               <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
               </div>
               <div class="form-row">
                 <ul class="btn-list">
                   <li><input type="submit" value="Log In" class="btn"></li>
                   <li class="spacer">Or</li>
-                  <li><input type="submit" value="Create an Account" class="btn btn-outline"></li>
+                  <li><a href="/sign-up/" class="btn btn-outline btn-regular">Create an Account</a></li>
                 </ul>
               </div>
             </form>

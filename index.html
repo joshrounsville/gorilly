@@ -32,7 +32,7 @@
 
             <a href="/" class="logo">
               <img src="/img/structure/gorilly.svg" alt="Gorilly" width="235" height="35">
-              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="16"></span>
+              <span><img src="/img/structure/tagline.svg" alt="Beta - San Francisco" width="235" height="12"></span>
             </a>
 
             <nav class="nav-main">
@@ -61,23 +61,23 @@
             <div class="slider-full">
               <div class="slide">
                 <div class="callout">
-                  <h1><span>Let the product</span><br> <span>do the speaking.</span></h1>
+                  <h1><span>Experience products</span><br> <span>before buying them</span></h1>
                   <a href="/search-products/" class="btn">Search Products</a>
-                  <img src="/img/callout/bag.jpg" alt="Topo Bag" width="1140" height="468">
+                  <img src="/img/callout/boom-case.jpg" alt="The Boom Case" width="1140" height="468">
                 </div>
               </div>
               <div class="slide">
                 <div class="callout callout-right">
-                  <h1><span>Enjoy the true value</span><br> <span>of great products.</span></h1>
+                  <h1><span>Enjoy the true value</span><br> <span>of great products</span></h1>
                   <a href="/search-products/" class="btn">Search Products</a>
                   <img src="/img/callout/dodo-case.jpg" alt="Dodo Case Bag" width="1140" height="468">
                 </div>
               </div>
               <div class="slide">
                 <div class="callout">
-                  <h1><span>Experience products</span><br> <span>before buying them.</span></h1>
+                  <h1><span>Let the product</span><br> <span>do the talking</span></h1>
                   <a href="/search-products/" class="btn">Search Products</a>
-                  <img src="/img/callout/boom-case.jpg" alt="The Boom Case" width="1140" height="468">
+                  <img src="/img/callout/bag.jpg" alt="Topo Bag" width="1140" height="468">
                 </div>
               </div>
             </div>
@@ -119,35 +119,35 @@
               <div class="slider-wrap">
                 <div class="slider">
                   <div>
-                    <a href="#" class="slide-wrap">
+                    <a href="#img-modal" data-img="/img/home/journal.jpg" class="slide-wrap modal-img">
                       <img data-lazy="/img/home/journal.jpg" alt="Journal">
                       <span class="circle">View</span>
                       <h6>DODOCase</h6>
                     </a>
                   </div>
                   <div>
-                    <a href="#" class="slide-wrap">
+                    <a href="#img-modal" data-img="/img/home/backpack.jpg" class="slide-wrap modal-img">
                       <img data-lazy="/img/home/backpack.jpg" alt="Backpack">
                       <span class="circle">View</span>
                       <h6>Topo Designs</h6>
                     </a>
                   </div>
                   <div>
-                    <a href="#" class="slide-wrap">
+                    <a href="#img-modal" data-img="/img/home/stereo.jpg" class="slide-wrap modal-img">
                       <img data-lazy="/img/home/stereo.jpg" alt="Stereo">
                       <span class="circle">View</span>
                       <h6>The Boom Case</h6>
                     </a>
                   </div>
                   <div>
-                    <a href="#" class="slide-wrap">
+                    <a href="#img-modal" data-img="/img/home/stereo.jpg" class="slide-wrap modal-img">
                       <img data-lazy="/img/home/stereo.jpg" alt="Stereo">
                       <span class="circle">View</span>
                       <h6>The Boom Case</h6>
                     </a>
                   </div>
                   <div>
-                    <a href="#" class="slide-wrap">
+                    <a href="#img-modal" data-img="/img/home/stereo.jpg" class="slide-wrap modal-img">
                       <img data-lazy="/img/home/stereo.jpg" alt="Stereo">
                       <span class="circle">View</span>
                       <h6>The Boom Case</h6>
@@ -177,7 +177,7 @@
                 <div class="span5">
                   <img src="/img/home/boom-case.jpg" alt="The Boom Case" width="458" height="458">
                 </div>
-                <div class="span7 text-center">
+                <div class="span7 center-left">
                   <h4>Showrooming</h4>
                   <i class="icon icon-arrow-down"></i>
                   <h1>Shoppers</h1>
@@ -187,7 +187,7 @@
               </div>
 
               <div class="row border-top">
-                <div class="span7">
+                <div class="span7 center-right">
                   <h4>Showrooming</h4>
                   <i class="icon icon-arrow-down"></i>
                   <h1>Product Gorillys</h1>
@@ -240,10 +240,10 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">How it Works</a></li>
                 <li><a href="#">Suggest a Product</a></li>
-                <li><a href="#">View FAQ</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Press</a></li>
               </ul>
             </nav>
@@ -278,24 +278,35 @@
           <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
           <div class="modal-body">
             <h4>Log in to your account to get started:</h4>
-            <form action="#" class="form-modal form-login">
+            <form action="#" class="form-modal form-login validate">
               <div class="form-row">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required>
               </div>
               <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
               </div>
               <div class="form-row">
                 <ul class="btn-list">
                   <li><input type="submit" value="Log In" class="btn"></li>
                   <li class="spacer">Or</li>
-                  <li><input type="submit" value="Create an Account" class="btn btn-outline"></li>
+                  <li><a href="/sign-up/" class="btn btn-outline btn-regular">Create an Account</a></li>
                 </ul>
               </div>
             </form>
           </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade img-modal" id="img-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
+          <div class="modal-body"></div>
 
         </div>
       </div>
