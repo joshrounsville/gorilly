@@ -615,6 +615,7 @@ textarea {
     .chosen-single {
       font-size: 15px;
       height: 53px;
+      backface-visibility: hidden;
     }
   }
   .select-wrap {
