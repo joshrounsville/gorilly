@@ -26,10 +26,19 @@
     float: left;
     border-right: 1px solid $darkGray;
     transition: border .3s ease-in-out;
+    width: 20%;
   }
   .content-wrap {
     padding: 10px 20px;
     float: left;
+    width: 80%;
+    p {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
   .meta {
     position: absolute;
@@ -105,6 +114,11 @@
       top: -40px;
       left: 0;
     }
+    &:after {
+      height: 27px;
+      top: auto;
+      bottom: -27px;
+    }
   }
 }
 
@@ -140,6 +154,7 @@
 }
 
 .nav-pagination {
+  margin-top: 40px;
   li {
     display: inline-block;
     margin: 0 5px 0 0;

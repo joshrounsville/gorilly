@@ -102,7 +102,7 @@
     text-transform: uppercase;
     @include oswald();
     font-size: 12px;
-    padding: 5px 10px 8px;
+    padding: 8px 10px;
     position: absolute;
     text-align: center;
     &.bottom {
@@ -116,6 +116,13 @@
     @include oswald();
     color: $darkGray;
     text-transform: uppercase;
+  }
+
+  .center-left {
+    padding-right: 50px;
+  }
+  .center-right {
+    padding-left: 50px;
   }
 
   @include breakpoint(large) {

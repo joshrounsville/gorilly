@@ -55,13 +55,26 @@
   }
 }
 
+.btn-regular {
+  padding: 13px 75px;
+}
+
 .btn-large {
   font-size: 20px;
   padding: 18px 60px;
 }
 
+.btn-small {
+  font-size: 13px;
+}
+
 .btn-narrow {
-  padding: 11px 55px;
+  padding: 11px 45px;
+}
+
+.btn-tall {
+  padding: 17px 75px;
+  font-size: 13px;
 }
 
 .btn-full {

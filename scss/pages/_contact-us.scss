@@ -1,0 +1,74 @@
+/* ==========================================================================
+  Contact Us
+========================================================================== */
+
+
+.contact-wrap {
+  background: $paleYellow;
+  text-align: center;
+  padding: 25px;
+  font-size: 20px;
+  .inner {
+    border: 1px solid $darkGray;
+    outline: 1px solid $darkGray;
+    outline-offset: 10px;
+    padding: 40px;
+  }
+  .inner-row {
+    @include clearfix();
+    margin: 0 0 20px;
+    padding: 0 30px;
+    &:nth-of-type(2n) {
+      margin: 0 0 60px;
+      padding-top: 20px;
+    }
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .headline {
+    font-size: 24px;
+  }
+  h3 {
+    @include oswald();
+    font-size: 18px;
+    color: $darkGray;
+    margin: 0 0 12px;
+    &:after {
+      content: " ";
+      display: block;
+      height: 3px;
+      width: 46px;
+      background: $green;
+      margin: 15px auto 0;
+    }
+  }
+  a {
+    color: $darkGray;
+    &:hover,
+    &:focus {
+      color: $green;
+    }
+  }
+  .list-contact {
+    display: block;
+    @include clearfix();
+    li {
+      display: block;
+      float: left;
+      width: 50%;
+      text-align: left;
+      margin: 0 0 10px;
+      padding: 0 10px 0 0;
+      &:nth-of-type(even) {
+        padding-left: 20px;
+      }
+    }
+    i {
+      font-size: 30px;
+      margin: 0 10px 0 0;
+      position: relative;
+      bottom: -3px;
+    }
+  }
+}

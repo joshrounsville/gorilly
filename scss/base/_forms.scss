@@ -172,25 +172,22 @@ textarea {
       }
     }
   }
+  label {
+    &.error {
+      color: #B22A26;
+      font-size: 12px;
+      animation: growHeight .8s ease both;
+      margin: 2px 0 0;
+      @include miller();
+      overflow: hidden;
+    }
+  }
 }
 
 .form-general {
   .one-third {
     width: 33.33333%;
     float: left;
-    &:first-of-type {
-      margin: 0;
-      .chosen-single {
-        border-left: 1px solid $darkGray;
-        border-right: none;
-      }
-      .chosen-with-drop {
-        .chosen-drop {
-          width: auto;
-          right: -1px;
-        }
-      }
-    }
     &.border {
       border: 1px solid $darkGray;
       border-left: none;
@@ -281,9 +278,96 @@ textarea {
     }
   }
   .thumbnails {
-    margin: 0;
+    margin: 30px 0 0;
+    display: block;
+    @include clearfix();
+    > li {
+      display: block;
+      float: left;
+      width: 144px;
+      height: 144px;
+      margin: 0 31px 0 0;
+      border: 1px solid $lightGray;
+      padding: 5px;
+      position: relative;
+      &:last-of-type {
+        margin: 0;
+      }
+      &.empty {
+        &:after,
+        &:before {
+          content: " ";
+          display: block;
+          width: 1px;
+          height: 200px;
+          background: $lightGray;
+          position: absolute;
+          top: -29px;
+          right: 50%;
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .photo-settings {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 12px 0 0 0;
+    @include miller();
     li {
+      display: block;
+      margin: 0 0 3px 0;
+    }
+    input, label {
+      @include miller();
       display: inline-block;
+      width: auto;
+      float: none;
+      color: $green;
+      cursor: pointer;
+    }
+    label {
+      transition: color .2s ease-in-out;
+      &:hover,
+      &:focus {
+        color: $darkGray;
+      }
+    }
+    input, i {
+      margin: 0 4px 0 0;
+    }
+    i {
+      font-size: 16px;
+    }
+    input {
+      -webkit-appearance: none;
+      background: #fff;
+      border: 1px solid $darkGray;
+      width: 14px;
+      height: 14px;
+      padding: 0;
+      position: relative;
+      bottom: -2px;
+      &:after {
+        position: absolute;
+        content: " ";
+        display: none;
+        width: 20px;
+        height: 20px;
+        left: -4px;
+        bottom: 1px;
+        background: url(/img/icons/check.svg) no-repeat center center;
+        background-size: 20px;
+        animation: fadeIn .2s both;
+      }
+      &:checked {
+        &:after {
+          display: block;
+        }
+      }
     }
   }
   .form-review {
@@ -324,7 +408,7 @@ textarea {
 
 .form-styled {
   background: $paleYellow;
-  padding: 40px;
+  padding: 25px;
   text-align: center;
   display: block;
   position: relative;
@@ -339,8 +423,19 @@ textarea {
       margin-bottom: 0;
     }
   }
-  h3 {
-    @include miller();
+  .input-wrap {
+    padding: 0;
+    width: 100%;
+    input {
+      display: inline-block;
+      vertical-align: middle;
+      width: 70%;
+      &.btn {
+        width: 25%;
+        padding: 13px 0;
+        margin-left: 10px;
+      }
+    }
   }
   label {
     @include millerItalic();
@@ -354,6 +449,10 @@ textarea {
       padding: 15px 0;
     }
   }
+  .btn {
+    width: 50%;
+    padding: 15px 0;
+  }
   textarea {
     margin: 0 auto;
     width: 90%;
@@ -362,7 +461,7 @@ textarea {
   &.form-green {
     background: $lightGreen;
     .form-row {
-      width: 60%;
+      width: 70%;
       margin-right: auto;
       margin-left: auto;
       position: relative;
@@ -373,22 +472,48 @@ textarea {
       margin: 0;
     }
     label {
-      top: 22px;
+      top: 20px;
       left: 15px;
       position: absolute;
       @include oswald();
+      &.error {
+        position: relative;
+        top: auto;
+        left: auto;
+        @include miller();
+      }
     }
     input {
       &:not(.btn) {
         border: 1px solid #fff;
         width: 100%;
-        padding: 22px 20px 22px 130px;
+        padding: 20px 20px 20px 130px;
         &:hover,
         &:focus {
           border-color: $green;
         }
       }
     }
+  }
+  .fa-circle {
+    position: absolute;
+    font-size: 7px;
+  }
+  .dot-1 {
+    top: 32px;
+    left: 32px;
+  }
+  .dot-2 {
+    top: 32px;
+    right: 32px;
+  }
+  .dot-3 {
+    bottom: 32px;
+    left: 32px;
+  }
+  .dot-4 {
+    bottom: 32px;
+    right: 32px;
   }
 }
 
@@ -458,6 +583,9 @@ textarea {
       width: 100%;
     }
   }
+  .btn {
+    width: 100%;
+  }
 }
 
 .form-payment {
@@ -479,6 +607,51 @@ textarea {
         margin: 0 auto;
       }
     }
+  }
+}
+
+.form-search {
+  .chosen-container-single {
+    .chosen-single {
+      font-size: 15px;
+      height: 53px;
+    }
+  }
+  .select-wrap {
+    width: 35%;
+    height: 53px;
+    display: block;
+    float: left;
+    margin: 0;
+    &:nth-of-type(2n) {
+      .chosen-single {
+        border-left: none;
+      }
+      .chosen-with-drop {
+        .chosen-drop {
+          left: -1px;
+          right: 0;
+          width: auto;
+        }
+      }
+    }
+  }
+  .btn-wrap {
+    width: 30%;
+    height: 53px;
+    float: left;
+    border: 1px solid $darkGray;
+    border-left: none;
+    padding: 8px 10px;
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+    float: none;
+    padding: 5px 75px;
+  }
+  .form-row {
+    margin: 0;
   }
 }
 
