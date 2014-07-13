@@ -156,7 +156,7 @@
   li {
     display: block;
     float: left;
-    width: 33.3333%;
+    width: 25%;
     padding: 0 20px 20px 0;
     cursor: pointer;
     &:hover,
@@ -168,5 +168,6 @@
   }
   img {
     transition: transform .1s ease;
+    backface-visibility: hidden;
   }
 }
