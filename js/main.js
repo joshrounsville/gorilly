@@ -72,12 +72,14 @@ $(function() {
 
     var navWrap = $('.tab-nav');
     var nav = navWrap.find('.tab-item');
+    var actionNav = navWrap.find('.tab-nav');
     var tab = $('.tab');
     var tabWrap = $('.tab-wrap');
     var formBtn = $('.tab .btn-form');
     var editBtn = $('.tab .btn-edit');
     var count = tab.length;
 
+    // if next/prev act as nav (list a product)
     formBtn.on('click', function(e) {
       e.preventDefault();
 
@@ -126,6 +128,46 @@ $(function() {
       tabWrap.find('.tab[data-tab=tab-1]').addClass('active');
       navWrap.find('.tab-item[data-target=tab-1]').addClass('active');
     });
+
+
+    // if tabs act as nav ( account page )
+    actionNav.on('click', function(e) {
+      e.preventDefault();
+
+      var target = $(this).attr('data-target');
+      var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
+      var url = '?=' + target;
+
+      tab.removeClass('active');
+      nav.removeClass('active');
+
+      tabTarget.addClass('active');
+      $(this).addClass('active');
+
+      window.location.hash = url;
+
+    });
+
+    // check url for #?=
+    if ( window.location.hash.length ) {
+      var hash = window.location.hash;
+
+      if ( hash.indexOf('?=') > 0 ) {
+        var target = hash.split('=')[1];
+        var navTarget = $(navWrap).find('.tab-nav[data-target=' + target + ']');
+        var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
+
+        nav.removeClass('active');
+        tab.removeClass('active');
+
+        navTarget.addClass('active');
+        tabTarget.addClass('active');
+
+        console.log(target);
+      }
+
+    }
+
 
   };
 
