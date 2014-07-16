@@ -1,0 +1,131 @@
+/* ==========================================================================
+  Account
+========================================================================== */
+
+
+/**** **** **** **** ****
+  Message
+**** **** **** **** ****/
+
+.message-meta {
+  @include oswald();
+  font-size: 14px;
+  margin: 0 0 30px;
+  li {
+    margin: 0 0 5px;
+  }
+  h4, h5 {
+    display: inline-block;
+    text-transform: none;
+    margin: 0 0 0 5px;
+    color: $darkGray;
+    @include miller();
+  }
+}
+
+.message {
+  margin: 0 0 50px;
+}
+
+
+/**** **** **** **** ****
+  Profile and Settings
+**** **** **** **** ****/
+
+.account-header {
+  background: $green;
+  padding: 10px;
+  height: 65px;
+  ul {
+    margin: 0;
+    @include clearfix();
+  }
+  li {
+    vertical-align: middle;
+    height: 100%;
+  }
+  h2 {
+    color: #fff;
+    font-size: 20px;
+    margin: 12px 0 0 20px;
+  }
+}
+
+.account-content {
+  background: $paleYellow;
+  padding: 30px 80px 40px 30px;
+}
+
+
+/**** **** **** **** ****
+  Sidebar
+**** **** **** **** ****/
+
+.nav-account {
+  display: block;
+  width: 100%;
+  border: 1px solid $green;
+  h3 {
+    display: block;
+    width: 100%;
+    background: $green;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  ul {
+    display: block;
+    padding: 0 10px;
+  }
+  li {
+    display: block;
+    border-bottom: 1px solid $darkGray;
+    padding: 17px 0 13px 20px;
+    &:first-of-type {
+      padding-top: 10px;
+    }
+    &:last-of-type {
+      border: none;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+  }
+  a {
+    @include oswald();
+    font-size: 14px;
+    &:before {
+      content: " ";
+      display: block;
+      width: 31px;
+      height: 20px;
+      background: url(/img/icons/right-arrow.svg) no-repeat center center;
+      float: left;
+      margin: 0 8px 0 0;
+      opacity: 0;
+      transform: translateX(-10px) scale(0.8);
+      transition: opacity .2s .1s ease-in-out, transform .2s .1s ease-in-out;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+      color: $darkGray;
+      &:before {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+    &.btn {
+      display: block;
+      width: 100%;
+      text-indent: 0;
+      color: $green;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
