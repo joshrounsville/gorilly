@@ -15,7 +15,7 @@
 /**** import elements ****/
 @import "elements/buttons", "elements/icons", "elements/font-awesome", "elements/callout";
 @import "elements/outline-box", "elements/border-box", "elements/tabs", "elements/slider", "elements/social-bar";
-@import "elements/modal", "elements/chosen-select";
+@import "elements/modal", "elements/chosen-select", "elements/on-off-switch";
 
 
 /**** import sections ****/
@@ -23,7 +23,7 @@
 
 
 /**** import pages ****/
-@import "pages/home", "pages/search", "pages/product-detail", "pages/listing-posted", "pages/contact-us";
+@import "pages/home", "pages/search", "pages/product-detail", "pages/listing-posted", "pages/contact-us", "pages/account";
 
 
 /**** import animations ****/

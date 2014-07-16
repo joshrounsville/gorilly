@@ -6,6 +6,8 @@
 .tab-nav {
   display: block;
   width: 100%;
+  margin: 0;
+  @include clearfix();
   li {
     display: block;
     float: left;
@@ -24,6 +26,11 @@
     font-size: 12px;
     border-bottom: 9px solid $green;
     padding: 5px 0;
+    height: 54px;
+    &.tab-nav {
+      font-size: 14px;
+      padding: 15px 0 5px;
+    }
     &.active {
       color: $darkGray;
       border-bottom: 9px solid $yellow;
@@ -37,6 +44,16 @@
       margin: 0 7px 0 0;
       transition: color .2s ease-in-out;
       color: $lightGreen;
+    }
+    &.tab-nav {
+      &:hover,
+      &:focus {
+        color: $darkGray;
+        border-bottom: 9px solid $yellow;
+        span {
+          color: #fff;
+        }
+      }
     }
   }
 
@@ -53,6 +70,10 @@
 .tab-wrap {
   background: #fcf7ec url(/img/structure/border-bottom.png) repeat-x center 99.5%;
   padding: 40px 40px 0;
+  &.tab-wrap-account {
+    background-image: none;
+    padding: 20px 0;
+  }
   .btn-next,
   .btn-post {
     float: right;
@@ -64,6 +85,13 @@
   }
 }
 
+.tab-wrap-account {
+  .tab-content {
+    position: relative;
+    padding-bottom: 40px;
+  }
+}
+
 .tab {
   display: none;
   animation: fadeIn .2s both;
@@ -72,11 +100,14 @@
   &.active {
     display: block;
   }
+  .tab-wrap-account & {
+    min-height: 1px;
+  }
 }
 
 .tab-header {
   text-align: center;
-  padding: 30px 0 20px;
+  padding: 0 0 20px;
   position: relative;
   h3 {
     font-size: 35px;

@@ -5,6 +5,33 @@
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  background: $lightGreen;
+  width: 100%;
+  font-size: 15px;
+  text-align: left;
+  tr {
+    border-bottom: 1px solid $green;
+  }
+  th {
+    padding: 0 0 15px 20px;
+    vertical-align: bottom;
+  }
+  td {
+    padding: 13px 0 13px 20px;
+    &:last-of-type {
+      padding-right: 20px;
+    }
+  }
+  .btn {
+    font-size: 12px;
+    padding: 8px 25px;
+  }
+}
+
+thead {
+  background: $paleYellow;
+  @include oswald();
+  font-size: 12px;
 }
 
 

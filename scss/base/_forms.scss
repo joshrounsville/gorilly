@@ -368,6 +368,12 @@ textarea {
           display: block;
         }
       }
+      .no-svg & {
+        &:after {
+          background: url(/img/icons/check.png) no-repeat center center;
+          background-size: 20px;
+        }
+      }
     }
   }
   .form-review {
@@ -596,6 +602,8 @@ textarea {
 
 .form-payment {
   .radio-list {
+    position: relative;
+    @include clearfix();
     img {
       vertical-align: top;
     }
@@ -604,6 +612,16 @@ textarea {
       bottom: auto;
       height: 40px;
       margin: 10px auto 15px;
+      &.error {
+        position: absolute;
+        right: 0;
+        bottom: -25px;
+        left: 0;
+        text-align: center;
+        height: auto;
+        margin: 0;
+        width: auto;
+      }
     }
     input {
       &[type=radio] {
@@ -662,6 +680,102 @@ textarea {
   }
 }
 
+.form-settings {
+  .form-row {
+    margin-bottom: 15px;
+    &.spacer {
+      margin-top: 20px;
+      margin-bottom: 45px;
+    }
+  }
+  label {
+    font-size: 14px;
+    @include oswald();
+    display: inline-block;
+    width: 26%;
+    vertical-align: middle;
+  }
+  input,
+  textarea {
+    background: $lightGreen;
+    border: none;
+    display: inline-block;
+    width: 72%;
+    vertical-align: middle;
+    font-size: 18px;
+    &:hover,
+    &:focus {
+      border: none;
+      background: $green;
+    }
+  }
+  .radio-list {
+    display: inline-block;
+    vertical-align: middle;
+    label {
+      margin: 0 0 2px;
+    }
+  }
+}
+
+input {
+  &.check {
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid $darkGray;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    position: relative;
+    bottom: -2px;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      content: " ";
+      display: none;
+      width: 30px;
+      height: 30px;
+      left: -4px;
+      bottom: 1px;
+      background: url(/img/icons/check.svg) no-repeat center center;
+      background-size: 30px;
+      animation: fadeIn .2s both;
+    }
+    &:checked {
+      &:after {
+        display: block;
+      }
+    }
+  }
+  &.ex-out {
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid $darkGray;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    position: relative;
+    bottom: -2px;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      content: " ";
+      display: none;
+      width: 36px;
+      height: 36px;
+      left: -5px;
+      bottom: -5px;
+      background: url(/img/icons/ex-out.svg) no-repeat center center;
+      background-size: 36px;
+      animation: fadeIn .2s both;
+    }
+    &:checked {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
 
 
 

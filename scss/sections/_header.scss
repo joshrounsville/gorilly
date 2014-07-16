@@ -132,11 +132,11 @@ header {
     padding: 10px 20px;
     border: 1px solid #cfcfcf;
     background: #fff;
-    font-size: 12px;
     text-transform: none;
     width: 220%;
     transform: translatez(0);
     animation: dropdownOut .2s both;
+    @include miller();
     li {
       margin: 15px 0 5px;
       padding: 0 0 5px;
@@ -156,7 +156,8 @@ header {
         padding: 0;
         border: none;
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
           border: none;
           color: $green;
         }

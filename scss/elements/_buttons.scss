@@ -111,3 +111,10 @@
     transition: background .2s ease-in-out;
   }
 }
+
+.btn-delete {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  padding: 10px 40px;
+}
