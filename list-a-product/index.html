@@ -40,7 +40,7 @@
                 <li><a href="/about-us/">About Us</a></li>
                 <li><a href="/how-it-works/">How it Works</a></li>
                 <li class="dropdown">
-                  <a href="/account/" class="highlight">Account</a>
+                  <a href="/account/messages/" class="highlight">Account</a>
                   <ul class="subnav">
                     <li><a href="/account/messages/">Messages</a></li>
                     <li><a href="/account/listings-codes/">My Listings &amp; Codes</a></li>
@@ -356,29 +356,29 @@
           <a href="#" class="close" data-dismiss="modal"><img src="/img/icons/close.svg" alt="Close icon"></a>
           <div class="modal-body">
             <h4>Please choose how you would like to get paid (you only have to do this once)</h4>
-            <form action="#" class="form-modal form-payment">
+            <form action="#" class="form-modal form-payment validate">
               <div class="form-row">
                 <ul class="radio-list list-inline text-center">
                   <li>
                     <label for="paypal">
                       <img src="/img/logos/paypal.png" alt="Paypal logo" width="120" height="31">
                     </label>
-                    <input type="radio" name="payment" id="paypal" value="Paypal">
+                    <input type="radio" name="payment" id="paypal" value="Paypal" required>
                   </li>
                   <li>
                     <label for="venmor">
                       <img src="/img/logos/venmo.png" alt="Venmo logo" width="120" height="23">
                     </label>
-                    <input type="radio" name="payment" id="venmor" value="Venmo">
+                    <input type="radio" name="payment" id="venmor" value="Venmo" required>
                   </li>
                   <li>
                     <label for="check">Get Paid by Check</label>
-                    <input type="radio" name="payment" id="check" value="Check">
+                    <input type="radio" name="payment" id="check" value="Check" required>
                   </li>
                 </ul>
               </div>
               <div class="form-row">
-                <input type="submit" value="Log In" class="btn">
+                <input type="submit" value="Select" class="btn">
               </div>
             </form>
           </div>
