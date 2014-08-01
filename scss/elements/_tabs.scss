@@ -94,9 +94,9 @@
 
 .tab {
   display: none;
-  animation: fadeIn .2s both;
   min-height: 615px;
   position: relative;
+  animation: fadeIn .2s both;
   &.active {
     display: block;
   }

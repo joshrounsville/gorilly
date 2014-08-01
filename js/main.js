@@ -162,8 +162,6 @@ $(function() {
 
         navTarget.addClass('active');
         tabTarget.addClass('active');
-
-        console.log(target);
       }
 
     }
@@ -322,6 +320,34 @@ $(function() {
     });
 
   });
+
+
+
+  // show respond form on messages page
+  var showReplyContent = function() {
+    var replyContent = $('.reply-content');
+    var showReplyBtn = $('.btn-reply');
+    var position;
+
+    showReplyBtn.on('click', function(e) {
+      e.preventDefault();
+      position = replyContent.offset().top - 30;
+
+      if ( !replyContent.hasClass('show') ) {
+        replyContent.addClass('show');
+      }
+
+      setTimeout(function() {
+        $('html, body').animate({
+          scrollTop: position
+        }, 600);
+      }, 200);
+
+    });
+
+  };
+
+  showReplyContent();
 
 
 });

@@ -12,6 +12,7 @@
   zoom: 1;
   *display: inline;
   user-select: none;
+  backface-visibility: hidden;
   .chosen-drop {
     position: absolute;
     top: 100%;
@@ -21,6 +22,7 @@
     border: 1px solid $darkGray;
     border-top: 0;
     background: #fff;
+    backface-visibility: hidden;
   }
   &.chosen-with-drop {
     .chosen-drop {
@@ -120,6 +122,7 @@
         font-size: 24px;
         padding: 14px 0 0 0;
         transition: transform .2s ease-in-out;
+        backface-visibility: hidden;
         &:after {
           content: "\f078";
           display: block;

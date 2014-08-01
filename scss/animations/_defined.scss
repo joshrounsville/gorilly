@@ -9,6 +9,28 @@
 
 
 /**** **** **** **** **** ****
+  Show Respond Form
+**** **** **** **** **** ****/
+
+@keyframes showRespondForm {
+  0% {
+    min-height: 0;
+    height: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    min-height: 577px;
+    opacity: 1;
+    height: auto;
+  }
+}
+
+
+
+/**** **** **** **** **** ****
   Grow Height
 **** **** **** **** **** ****/
 
