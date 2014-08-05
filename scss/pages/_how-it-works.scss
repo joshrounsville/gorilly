@@ -1,0 +1,291 @@
+/* ==========================================================================
+  How it Works
+========================================================================== */
+
+
+.container {
+  &.pad-b--0 {
+    padding-bottom: 0;
+  }
+}
+
+.hiw-bg-light-green {
+  background: $lightGreen;
+  .container {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  h4 {
+    color: $darkGray;
+    @include oswald();
+  }
+}
+
+.hiw-bg-green {
+  background: $green;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    background: $green;
+    position: absolute;
+  }
+  &:before {
+    width: 8px;
+    height: 200px;
+    bottom: -200px;
+    left: 50%;
+    margin-left: -4px;
+  }
+  &:after {
+    height: 8px;
+    width: 600px;
+    bottom: -200px;
+    left: 50%;
+    margin-left: -300px;
+  }
+  .container {
+    padding-bottom: 0;
+  }
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h2 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 90px 0 85px;
+    margin: 0;
+  }
+}
+
+.hiw-center-col {
+  h4 {
+    margin: 100px 0 0 0;
+    padding: 0 30px;
+    display: block;
+  }
+  img {
+    margin: 580px 0 0 0;
+  }
+}
+
+.hiw-intro {
+  &:after {
+    content: " ";
+    display: block;
+    width: 8px;
+    height: 90px;
+    margin: 0 auto;
+    background: #fff;
+  }
+  h4 {
+    padding: 0 0 30px;
+    &:before {
+      content: " ";
+      display: block;
+      height: 4px;
+      width: 40px;
+      background: #fff;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+.hiw-portrait {
+  background: $green;
+  width: 197px;
+  height: 197px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0 auto 30px;
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.hiw-portrait-large {
+  width: 280px;
+  height: 280px;
+  margin-top: 10px;
+}
+
+.hiw-box {
+  border: 8px solid #fff;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 0 50px;
+  height: 210px;
+  &:after {
+    content: " ";
+    display: block;
+    width: 8px;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    bottom: -58px;
+    left: 50%;
+    margin-left: -4px;
+  }
+  p {
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.hiw-box-border-top {
+  margin-top: 90px;
+  height: 180px;
+  &:after {
+    top: -98px;
+    height: 90px;
+    bottom: auto;
+  }
+}
+
+.hiw-purple-box {
+  background: $purple;
+  border: none;
+  outline: 4px solid $green;
+  outline-offset: -15px;
+  padding: 0 50px;
+  height: 160px;
+  &:after {
+    background: $green;
+    bottom: -99px;
+    height: 110px;
+  }
+  p {
+    color: #fff;
+    font-size: 26px;
+  }
+}
+
+.hiw-purple-box-large {
+  outline-color: #fff;
+  outline-offset: -30px;
+  height: 336px;
+  padding: 60px 90px;
+  position: relative;
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    background: $purple;
+    position: absolute;
+    left: 50%;
+    bottom: -250px;
+  }
+  &:before {
+    height: 250px;
+    width: 8px;
+    margin-left: -4px;
+  }
+  &:after {
+    height: 8px;
+    width: 520px;
+    margin-left: -260px;
+  }
+  p {
+    top: 0;
+    transform: translateY(0);
+    padding: 0 0 25px;
+  }
+}
+
+.hiw-bordered {
+  position: relative;
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    width: 42%;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    height: 4px;
+    background: url(/img/how-it-works/dotted-border.svg) no-repeat center center;
+    left: 0;
+  }
+  &:after {
+    left: auto;
+    right: 0;
+  }
+}
+
+.hiw-yellow-circle {
+  width: 252px;
+  height: 252px;
+  border-radius: 100%;
+  background: $yellow;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+  top: -35px;
+  &:after {
+    content: " ";
+    display: block;
+    width: 8px;
+    height: 180px;
+    background: $purple;
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    bottom: -180px;
+  }
+  .inner {
+    background: #fff6b7;
+    width: 212px;
+    height: 212px;
+    border-radius: 100%;
+    padding: 0 30px;
+  }
+  h4 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.hiw-logo {
+  margin: 240px auto 65px;
+}
+
+.hiw-btn {
+  margin-top: 580px;
+}
+
+.hiw-btn-border {
+  position: relative;
+  margin-top: 100px;
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -191px;
+    background: $darkGray;
+  }
+  &:before {
+    width: 2px;
+    height: 190px;
+    margin-left: -1px;
+  }
+  &:after {
+    height: 2px;
+    width: 90px;
+    margin-left: -45px;
+  }
+}
