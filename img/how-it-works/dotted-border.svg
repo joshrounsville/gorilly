@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="430px" height="7px" viewBox="0 0 430 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M2.5,3.27734375 L427.5,3.27734375"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Path-30">
+            <use stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="1,12" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            <use stroke="none" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
