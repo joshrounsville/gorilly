@@ -1,0 +1,55 @@
+/* ==========================================================================
+  FAQ
+========================================================================== */
+
+
+.nav-faq {
+  padding: 10px 0 0 0;
+  ul {
+    display: block;
+    margin: 0 0 40px;
+  }
+  h4 {
+    color: $darkGray;
+    @include oswald();
+    padding: 0 0 10px;
+  }
+  li {
+    margin: 0 0 8px;
+  }
+}
+
+.list-faq {
+  margin: 0 0 50px;
+  h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    color: $darkGray;
+    font-size: 18px;
+    margin: 0;
+    padding: 0 0 7px;
+  }
+  p {
+    margin: 0;
+  }
+  li {
+    margin: 0 0 25px;
+  }
+  table {
+    margin: 10px 0;
+    td, th {
+      background: #fff;
+      padding: 10px 15px;
+    }
+    td {
+      border-right: 1px solid $green;
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+}

@@ -301,8 +301,6 @@ $(function() {
 
   });
 
-  //$('#payment-modal').modal('show');
-
 
 
   // validate forms
@@ -348,6 +346,32 @@ $(function() {
   };
 
   showReplyContent();
+
+
+
+  var scrollToPosition = function() {
+    var scrollLink = $('.scroll-nav a');
+    var scrollTarget = $('.scroll-target');
+    var target;
+    var position;
+
+    scrollLink.on('click', function(e) {
+      e.preventDefault();
+
+      target = $(this).attr('href');
+      target = $(scrollTarget).find(target);
+      position = $(target).offset().top - 20;
+
+      $('html, body').animate({
+        scrollTop: position
+      }, 500);
+
+    });
+
+
+  };
+
+  scrollToPosition();
 
 
 });
