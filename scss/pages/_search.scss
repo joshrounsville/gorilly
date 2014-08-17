@@ -23,15 +23,18 @@
     }
   }
   .img-wrap {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     border-right: 1px solid $darkGray;
     transition: border .3s ease-in-out;
     width: 20%;
   }
   .content-wrap {
     padding: 10px 20px;
-    float: left;
     width: 80%;
+    margin-left: 20%;
     p {
       width: 100%;
       display: block;

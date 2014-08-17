@@ -79,6 +79,10 @@
   .img-wrap {
     float: left;
     margin: 0 25px 0 0;
+    width: 105px;
+    height: 105px;
+    border-radius: 100%;
+    overflow: hidden;
   }
   h5 {
     @include oswald();
@@ -138,9 +142,13 @@
 
 .img-large {
   margin: 0 0 20px;
+  height: 458px;
   img {
     opacity: 1;
     transition: opacity .25s ease;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
   &.loading {
     img {

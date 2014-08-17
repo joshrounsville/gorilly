@@ -287,19 +287,19 @@ $(function() {
 
 
   // img modal (for homepage)
-  var imgModal = $('.modal-img');
-  imgModal.on('click', function(e) {
-    e.preventDefault();
+  // var imgModal = $('.modal-img');
+  // imgModal.on('click', function(e) {
+  //   e.preventDefault();
 
-    var target = $(this).attr('href');
-    var img = $(this).attr('data-img');
-        img = $('<img>', {src: img, alt: 'Gorilly Product Image' });
+  //   var target = $(this).attr('href');
+  //   var img = $(this).attr('data-img');
+  //       img = $('<img>', {src: img, alt: 'Gorilly Product Image' });
 
-    $(target).find('.modal-body').find('img').remove();
-    $(target).find('.modal-body').append(img);
-    $(target).modal();
+  //   $(target).find('.modal-body').find('img').remove();
+  //   $(target).find('.modal-body').append(img);
+  //   $(target).modal();
 
-  });
+  // });
 
 
 
@@ -350,7 +350,7 @@ $(function() {
 
 
   var scrollToPosition = function() {
-    var scrollLink = $('.scroll-nav a');
+    var scrollLink = $('.scroll-link');
     var scrollTarget = $('.scroll-target');
     var target;
     var position;

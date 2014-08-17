@@ -37,16 +37,15 @@
 
 .modal-dialog {
   position: relative;
-  width: auto;
-  margin: 10px;
+  width: 50%;
+  margin: 40px auto 0;
 }
 
 .modal-content {
   position: relative;
   background: $paleYellow;
   background-clip: padding-box;
-  width: 50%;
-  margin: 40px auto 0;
+  width: 100%;
   outline: 0;
   padding: 20px;
   .close {
