@@ -6,6 +6,12 @@ $(function() {
   var isDesktop = body.css('margin-bottom') !== '1px';
   var notDesktop = body.css('margin-bottom') === '1px';
 
+  $(window).on('resize', function() {
+    isPhone = body.css('padding-bottom') === '1px';
+    isDesktop = body.css('margin-bottom') !== '1px';
+    notDesktop = body.css('margin-bottom') === '1px';
+  });
+
 
   // svg fallback
   if ( !Modernizr.svg ) {
@@ -13,6 +19,36 @@ $(function() {
       return $(this).attr('src').replace('.svg', '.png');
     });
   }
+
+
+
+  // mobile nav hide/show
+
+  var mobileNav = function() {
+    var navBtn = $('.mobile-nav');
+
+    navBtn.on('touchstart click', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+
+      if ( body.hasClass('show-mobile-sub-nav') ) {
+        body.removeClass('show-mobile-sub-nav');
+      } else {
+        body.toggleClass('show-mobile-nav');
+      }
+
+    });
+
+    var subNavBtn = $('.dropdown > a');
+    subNavBtn.on('touchstart click', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+
+      body.toggleClass('show-mobile-sub-nav');
+    });
+  };
+
+  mobileNav();
 
 
 
@@ -82,6 +118,10 @@ $(function() {
     // if next/prev act as nav (list a product)
     formBtn.on('click', function(e) {
       e.preventDefault();
+
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
 
       var currentTab = $(this).parents('.tab').attr('data-tab');
           currentTab = currentTab.split('-');
@@ -209,9 +249,11 @@ $(function() {
 
   // fancy select menus via Chosen
   var selectMenus = $('.select');
-  $(selectMenus).chosen({
-    disable_search_threshold: 100
-  });
+  if ( !isPhone ) {
+    $(selectMenus).chosen({
+      disable_search_threshold: 100
+    });
+  }
 
 
 
@@ -238,7 +280,7 @@ $(function() {
 
   };
 
-  if ( affixEl.length ) {
+  if ( affixEl.length && !isPhone ) {
     affix();
   }
 
@@ -268,7 +310,7 @@ $(function() {
 
   };
 
-  if ( formEl.length ) {
+  if ( formEl.length && !isPhone ) {
     formScroll();
   }
 
@@ -283,6 +325,10 @@ $(function() {
 
     var target = $(this).attr('href');
     $(target).modal();
+
+    if ( notDesktop ) {
+      body.removeClass('show-mobile-nav');
+    }
   });
 
 
