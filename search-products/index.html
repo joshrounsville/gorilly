@@ -46,6 +46,8 @@
               <a href="/search-products/" class="tag active">Search Products</a>
             </nav>
 
+            <a href="#" class="mobile-nav"><i class="fa fa-bars"></i></a>
+
           </div>
 
         </div>
@@ -69,6 +71,7 @@
               <form action="#" class="form-general form-search">
                  <div class="form-row">
                   <div class="select-wrap">
+                    <label for="select-brand" class="mobile-label">Select a Brand</label>
                     <select name="select-brand" id="select-brand" class="select" data-placeholder="Select a Brand">
                       <option value=""></option>
                       <option value="first">First Brand</option>
@@ -78,7 +81,8 @@
                     </select>
                   </div>
                   <div class="select-wrap">
-                    <select name="select-brand" id="select-brand" class="select" data-placeholder="Zip Code or Neighborhood">
+                    <label for="select-location" class="mobile-label">Zip Code or Neighborhood</label>
+                    <select name="select-location" id="select-location" class="select" data-placeholder="Zip Code or Neighborhood">
                       <option value=""></option>
                       <optgroup label="Zip Code">
                         <option value="1">12345</option>
