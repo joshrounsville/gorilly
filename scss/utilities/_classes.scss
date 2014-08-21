@@ -17,11 +17,43 @@
   li {
     margin: 0 20px;
   }
+
+  @include breakpoint(medium) {
+    li {
+      display: block;
+      margin: 0;
+      &:nth-of-type(2) {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
 }
 
 .list-spacer-horz--2x {
   li {
     margin: 0 40px;
+    padding: 0 20px;
+  }
+
+  @include breakpoint(medium) {
+    li {
+      width: 32%;
+      margin: 0;
+      padding: 0 25px;
+    }
+  }
+
+  @include breakpoint(small) {
+    li {
+      margin: 20px 0;
+    }
   }
 }
 
@@ -69,6 +101,19 @@
   &:after {
     right: 0;
     left: auto;
+  }
+
+  @include breakpoint(medium) {
+    &:before,
+    &:after {
+      width: 35%;
+    }
+  }
+  @include breakpoint(small) {
+    &:before,
+    &:after {
+      width: 18%;
+    }
   }
 }
 

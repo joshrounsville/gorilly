@@ -12,6 +12,9 @@ input {
   border: none;
   outline: 0;
   transition: all .2s ease-in-out;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
 }
 
 textarea {
@@ -180,6 +183,13 @@ textarea {
       margin: 2px 0 0;
       @include miller();
       overflow: hidden;
+    }
+  }
+
+  @include breakpoint(small) {
+    &.form-row-bottom {
+      position: static;
+      bottom: auto;
     }
   }
 }
@@ -410,6 +420,62 @@ textarea {
       font-size: 14px;
     }
   }
+
+  @include breakpoint(small) {
+    .select-wrap {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    textarea,
+    input {
+      width: 100%;
+    }
+    label {
+      font-size: 12px;
+      width: 100%;
+      padding: 0 0 10px;
+    }
+    .thumbnails {
+      li {
+        width: 49%;
+        height: auto;
+        margin: 0 0 2%;
+        float: left;
+        &:nth-of-type(even) {
+          float: right;
+        }
+        &.empty {
+          height: 144px;
+          overflow: hidden;
+          &:before,
+          &:after {
+            //height: 200px;
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .photo-settings {
+      margin: 0;
+      padding: 7px 0 0;
+      li {
+        display: block;
+        width: 100%;
+        height: auto;
+        float: none;
+      }
+      label {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .form-review {
+      padding: 10px;
+    }
+  }
 }
 
 .form-styled {
@@ -521,6 +587,52 @@ textarea {
     bottom: 32px;
     right: 32px;
   }
+
+  @include breakpoint(medium) {
+    padding: 20px;
+    .inner {
+      padding: 20px;
+    }
+    input,
+    textarea {
+      width: 80%;
+    }
+    .btn {
+      width: 70%;
+    }
+  }
+  @include breakpoint(small) {
+    padding: 20px;
+    .inner {
+      padding: 10px;
+    }
+    .input-wrap {
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+        &.btn {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+    input,
+    textarea {
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+    }
+    &.form-green {
+      .inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .form-row {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .form-modal {
@@ -597,6 +709,21 @@ textarea {
   }
   .btn {
     width: 100%;
+  }
+
+  @include breakpoint(large) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include breakpoint(medium) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @include breakpoint(small) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -678,6 +805,43 @@ textarea {
   .form-row {
     margin: 0;
   }
+
+  @include breakpoint(medium) {
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 5px 0;
+    }
+  }
+
+  @include breakpoint(small) {
+    .select-wrap,
+    .btn-wrap {
+      width: 100%;
+      margin: 0 0 10px;
+      float: none;
+      height: auto;
+    }
+    .select-wrap {
+      &:after {
+        font-family: fontAwesome;
+        content: "\f078";
+        color: $orange;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .btn-wrap {
+      border: 1px solid $darkGray;
+    }
+    label {
+      margin: 0;
+    }
+  }
 }
 
 .form-settings {
@@ -714,6 +878,17 @@ textarea {
     vertical-align: middle;
     label {
       margin: 0 0 2px;
+    }
+  }
+
+  @include breakpoint(small) {
+    .radio-list {
+      padding-left: 20px;
+      li {
+        display: block;
+        margin: 0;
+        padding: 20px 0 0 0;
+      }
     }
   }
 }
@@ -777,5 +952,16 @@ input {
   }
 }
 
+label {
+  &.mobile-label {
+    display: none;
+  }
+
+  @include breakpoint(small) {
+    &.mobile-label {
+      display: block;
+    }
+  }
+}
 
 

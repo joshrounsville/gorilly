@@ -11,6 +11,16 @@ header {
     margin-bottom: 0;
     animation: fadeIn .2s .3s both;
   }
+
+  @include breakpoint(medium) {
+    padding: 0 0 30px;
+  }
+  @include breakpoint(small) {
+    padding: 0 0 20px;
+    .row {
+      animation: none;
+    }
+  }
 }
 
 .logo {
@@ -22,6 +32,13 @@ header {
     margin-top: 10px;
     display: block;
     position: relative;
+  }
+
+  @include breakpoint(small) {
+    width: 54%;
+    span {
+      margin-top: 3px;
+    }
   }
 }
 
@@ -189,5 +206,239 @@ header {
     .subnav {
       width: 250%;
     }
+  }
+
+  @include breakpoint(medium) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(200px);
+    width: 200px;
+    padding: 50px 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    .show-mobile-nav & {
+      opacity: 1;
+    }
+    ul {
+      margin: 0;
+    }
+    li {
+      display: block;
+      padding: 0;
+      margin: 0 0 25px;
+    }
+    a {
+      &:not(.btn) {
+        color: #fff;
+      }
+      &.btn {
+        margin: 0;
+        display: block;
+      }
+      &.tag {
+        margin: 0;
+        float: none;
+        padding: 20px 0;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    .dropdown {
+      border: none;
+      &:after {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        border: none;
+        .subnav {
+          animation: none;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      a {
+        &:hover,
+        &:focus {
+          color: #fff;
+          border-bottom: 4px solid $yellow;
+        }
+      }
+    }
+
+    .subnav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      visibility: visible;
+      animation: none;
+      width: 220px;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 45px 20px;
+      transform: translateX(400px);
+      z-index: 1;
+      background: $green;
+      transition: transform 0.2s ease-in-out;
+      li {
+        margin: 0 0 15px;
+        padding: 0;
+      }
+      a {
+        color: #fff;
+        &:not(.btn) {
+          color: #fff;
+          font-size: 13px;
+          @include oswald();
+          &:hover,
+          &:focus {
+            color: $purple;
+          }
+        }
+      }
+
+      .show-mobile-sub-nav & {
+        transform: translateX(40px);
+      }
+    }
+
+  }
+  @include breakpoint(small) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(200px);
+    width: 200px;
+    padding: 50px 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    .show-mobile-nav & {
+      opacity: 1;
+    }
+    ul {
+      margin: 0;
+    }
+    li {
+      display: block;
+      padding: 0;
+      margin: 0 0 25px;
+    }
+    a {
+      &:not(.btn) {
+        color: #fff;
+      }
+      &.btn {
+        margin: 0;
+        display: block;
+      }
+      &.tag {
+        margin: 0;
+        float: none;
+        padding: 20px 0;
+        text-align: center;
+        display: block;
+      }
+    }
+    .dropdown {
+      border: none;
+      &:after {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        border: none;
+        .subnav {
+          animation: none;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      a {
+        &:hover,
+        &:focus {
+          color: #fff;
+          border-bottom: 4px solid $yellow;
+        }
+      }
+    }
+
+    .subnav {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      visibility: visible;
+      animation: none;
+      width: 220px;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 45px 20px;
+      transform: translateX(400px);
+      z-index: 1;
+      background: $green;
+      transition: transform 0.2s ease-in-out;
+      li {
+        margin: 0 0 15px;
+        padding: 0;
+      }
+      a {
+        color: #fff;
+        &:not(.btn) {
+          color: #fff;
+          font-size: 13px;
+          @include oswald();
+          &:hover,
+          &:focus,
+          &.active {
+            color: $purple;
+          }
+        }
+      }
+
+      .show-mobile-sub-nav & {
+        transform: translateX(40px);
+      }
+    }
+  }
+}
+
+
+.mobile-nav {
+  display: none;
+  float: right;
+  color: $darkGray;
+  font-size: 28px;
+  padding: 20px 20px 0;
+  margin: 20px -20px 0 0;
+  position: relative;
+  &:hover,
+  &:focus {
+    color: $green;
+  }
+
+  .show-mobile-nav & {
+    i {
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+  @include breakpoint(small) {
+    display: block;
+    margin: 10px -10px 0 0;
   }
 }

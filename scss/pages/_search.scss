@@ -30,6 +30,7 @@
     border-right: 1px solid $darkGray;
     transition: border .3s ease-in-out;
     width: 20%;
+    overflow: hidden;
   }
   .content-wrap {
     padding: 10px 20px;
@@ -89,10 +90,67 @@
       color: $green;
     }
   }
+
+  @include breakpoint(large) {
+    h5 {
+      margin: 5px 0 8px;
+      &:after {
+        display: none;
+      }
+    }
+    p {
+      margin: 0 0 10px;
+    }
+  }
+  @include breakpoint(medium) {
+    h5 {
+      margin: 0 0 3px;
+      &:after {
+        display: none;
+      }
+    }
+    p {
+      margin: 0 0 5px;
+    }
+  }
+  @include breakpoint(small) {
+    padding-right: 0;
+    > li {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .img-wrap {
+      width: 100%;
+      position: static;
+      border: none;
+      padding: 0 10px 10px;
+      img {
+        margin: auto;
+        display: block;
+      }
+    }
+    .content-wrap {
+      width: 100%;
+      margin-left: 0;
+    }
+    h5 {
+      margin: 0 0 7px;
+      &:after {
+        display: none;
+      }
+    }
+    p {
+      margin: 0 0 7px;
+    }
+  }
 }
 
 .form-scroll-parent {
   height: 81px;
+
+  @include breakpoint(small) {
+    height: auto;
+  }
 }
 
 .form-scroll {
@@ -123,6 +181,16 @@
       bottom: -27px;
     }
   }
+
+  @include breakpoint(large) {
+    width: 950px;
+  }
+  @include breakpoint(medium) {
+    width: 730px;
+  }
+  @include breakpoint(small) {
+    width: 100%;
+  }
 }
 
 .map-wrap {
@@ -133,6 +201,16 @@
   &.affix-bottom {
     top: auto;
     position: relative;
+  }
+
+  @include breakpoint(large) {
+    width: 383px;
+  }
+  @include breakpoint(medium) {
+    width: 292px;
+  }
+  @include breakpoint(small) {
+    display: none;
   }
 }
 
@@ -179,6 +257,29 @@
       padding-right: 10px;
       padding-left: 10px;
       width: auto;
+    }
+  }
+
+  @include breakpoint(small) {
+    position: relative;
+    li {
+      margin: 0;
+    }
+    a {
+      display: none;
+      &.prev,
+      &.next {
+        display: block;
+        padding: 0;
+        width: auto;
+        width: 49%;
+        position: absolute;
+        left: 0;
+      }
+      &.next {
+        right: 0;
+        left: auto;
+      }
     }
   }
 }

@@ -24,13 +24,28 @@ body {
   margin: 0;
   color: $textColor;
   background: $purple;
+  transition: transform 0.2s ease-in-out;
 
   @include breakpoint(medium) {
     margin-bottom: 1px;
+
+    &.show-mobile-nav {
+      transform: translateX(-200px);
+    }
+    &.show-mobile-sub-nav {
+      transform: translateX(-240px);
+    }
   }
   @include breakpoint(small) {
     padding-bottom: 1px;
     margin-bottom: 1px;
+
+    &.show-mobile-nav {
+      transform: translateX(-200px);
+    }
+    &.show-mobile-sub-nav {
+      transform: translateX(-240px);
+    }
   }
 }
 
@@ -73,6 +88,10 @@ ol {
 
 .headline--2x {
   font-size: 26px;
+
+  @include breakpoint(small) {
+    font-size: 22px;
+  }
 }
 
 
@@ -118,6 +137,13 @@ h1, .h1 {
   @include breakpoint(large) {
     font-size: 46px;
   }
+  @include breakpoint(medium) {
+    font-size: 38px;
+  }
+  @include breakpoint(small) {
+    font-size: 33px;
+    margin: 0 0 10px;
+  }
 }
 
 h2, .h2 {
@@ -125,6 +151,13 @@ h2, .h2 {
   margin: 0 0 20px;
   @include breakpoint(large) {
     font-size: 36px;
+  }
+  @include breakpoint(medium) {
+    font-size: 33px;
+  }
+  @include breakpoint(small) {
+    font-size: 30px;
+    margin: 0 0 10px;
   }
 }
 
@@ -134,12 +167,25 @@ h3, .h3 {
   @include breakpoint(large) {
     font-size: 26px;
   }
+  @include breakpoint(medium) {
+    font-size: 22px;
+  }
+  @include breakpoint(small) {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
 }
 
 h4, .h4 {
   font-size: 18px;
   @include breakpoint(large) {
     font-size: 16px;
+  }
+  @include breakpoint(medium) {
+    font-size: 15px;
+  }
+  @include breakpoint(small) {
+    font-size: 15px;
   }
 }
 

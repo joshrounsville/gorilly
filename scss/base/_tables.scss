@@ -42,10 +42,9 @@ thead {
     margin-bottom: 15px;
     overflow-x: scroll;
     overflow-y: hidden;
-    border: 1px solid #ddd;
-    > .table {
+    -webkit-overflow-scrolling: touch;
+    > table {
       margin-bottom: 0;
-      background-color: #fff;
       > thead,
       > tbody,
       > tfoot {

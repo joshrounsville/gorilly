@@ -19,30 +19,10 @@
   margin: 0 auto;
   position: relative;
   padding: 10px 0 60px;
-  &:before,
-  &:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 120px;
-    z-index: 10;
-    background-image: linear-gradient(
-      to right,
-      rgba(255,255,255,1),
-      rgba(255,255,255,0)
-    );
-  }
-  &:after {
-    right: 0;
-    left: auto;
-    background-image: linear-gradient(
-      to left,
-      rgba(255,255,255,1),
-      rgba(255,255,255,0)
-    );
+
+  @include breakpoint(small) {
+    padding: 20px 0 40px;
+    width: 90%;
   }
 }
 
@@ -146,6 +126,16 @@
     bottom: 0;
     left: 0;
   }
+
+  @include breakpoint(medium) {
+    width: 70%;
+    margin: auto;
+  }
+  @include breakpoint(small) {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 30px;
+  }
 }
 
 .slide-next,
@@ -164,6 +154,15 @@
     opacity: 1;
     transform: translateX(-8px);
   }
+  @include breakpoint(small) {
+    opacity: 1;
+    width: 22px;
+    left: 15px;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
 }
 .slide-next {
   right: 30px;
@@ -171,6 +170,13 @@
   &:hover,
   &:focus {
     transform: translateX(8px);
+  }
+  @include breakpoint(small) {
+    right: 15px;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
   }
 }
 

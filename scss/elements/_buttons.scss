@@ -32,6 +32,11 @@
   @include breakpoint(large) {
     padding: 11px 60px;
   }
+  @include breakpoint(small) {
+    display: block;
+    padding: 11px 0;
+    width: 100%;
+  }
 }
 
 .btn-green {
@@ -53,6 +58,10 @@
     background: $green;
     color: #fff;
   }
+
+  @include breakpoint(small) {
+    padding: 6px 0;
+  }
 }
 
 .btn-outline-dark-green {
@@ -61,6 +70,10 @@
 
 .btn-regular {
   padding: 13px 75px;
+
+  @include breakpoint(small) {
+    padding: 13px 0;
+  }
 }
 
 .btn-large {
@@ -75,6 +88,11 @@
 .btn-narrow {
   padding: 11px 45px;
   max-width: 250px;
+
+  @include breakpoint(small) {
+    padding: 11px 0;
+    max-width: none;
+  }
 }
 
 .btn-tall {
@@ -115,6 +133,7 @@
     transform: rotate(45deg);
     transition: background .2s ease-in-out;
   }
+
 }
 
 .btn-delete {
@@ -122,4 +141,10 @@
   bottom: -20px;
   left: 0;
   padding: 10px 40px;
+
+  @include breakpoint(small) {
+    position: static;
+    bottom: auto;
+    padding: 10px 0;
+  }
 }

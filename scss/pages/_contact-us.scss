@@ -71,4 +71,42 @@
       bottom: -3px;
     }
   }
+
+  @include breakpoint(small) {
+    .inner {
+      padding: 15px;
+    }
+    .inner-row {
+      padding: 0;
+      margin: 0 0 20px;
+    }
+    .headline {
+      font-size: 20px;
+      margin: 0;
+    }
+    .left,
+    .right {
+      float: none;
+    }
+    .left {
+      padding: 0 0 20px;
+    }
+    p {
+      margin: 0;
+    }
+    .list-contact {
+      font-size: 17px;
+      li {
+        width: 100%;
+        float: none;
+        padding: 0 0 5px;
+        &:nth-of-type(even) {
+          padding: 0 0 5px;
+        }
+      }
+      i {
+        margin: 0 7px 0 0;
+      }
+    }
+  }
 }

@@ -42,8 +42,69 @@
 
   @include breakpoint(large) {
     h1 {
-      font-size: 58px;
+      font-size: 50px;
       top: 15%;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &.callout-right {
+      .btn {
+        right: 10%;
+      }
+    }
+    h1 {
+      font-size: 40px;
+      top: 15%;
+    }
+    .btn {
+      left: 10%;
+    }
+  }
+
+  @include breakpoint(small) {
+    img {
+      order: 1;
+    }
+    &.callout-right {
+      .btn {
+        right: 0;
+        width: 100%;
+      }
+       h1 {
+        top: auto;
+        bottom: 100px;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    h1 {
+      position: static;
+      font-size: 25px;
+      top: auto;
+      bottom: auto;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      span {
+        display: inline-block;
+        width: 100%;
+        padding: 6px 0;
+        margin: 0;
+        line-height: 1;
+      }
+    }
+    .btn {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      position: static;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
 }

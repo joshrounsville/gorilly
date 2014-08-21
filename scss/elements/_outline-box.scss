@@ -149,4 +149,62 @@
     }
   }
 
+  @include breakpoint(medium) {
+    .row {
+      &:before,
+      &:after {
+        width: 10px;
+      }
+      h4 {
+        margin: 25px 0 0 0;
+      }
+      .icon {
+        margin: 10px auto -5px;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 30px 0 0 0;
+        padding: 0;
+      }
+      .btn {
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    .center-left,
+    .center-right {
+      padding: 0 50px 30px;
+    }
+    .row {
+      &:before,
+      &:after {
+        width: 10px;
+      }
+      h4 {
+        margin: 10px 0 0 0;
+      }
+      .icon {
+        margin: 10px auto -5px;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 20px 0 0 0;
+        padding: 0;
+      }
+      .btn {
+        margin: 20px 0 0 0;
+      }
+    }
+    &.bg-color {
+      .row {
+        background: $paleYellow;
+      }
+    }
+  }
 }

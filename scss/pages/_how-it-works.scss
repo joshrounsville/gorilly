@@ -61,6 +61,17 @@
     padding: 90px 0 85px;
     margin: 0;
   }
+
+  @include breakpoint(small) {
+    &:before,
+    &:after {
+      display: none;
+    }
+    h2 {
+      font-size: 26px;
+      padding: 40px 0 20px;
+    }
+  }
 }
 
 .hiw-center-col {
@@ -71,6 +82,10 @@
   }
   img {
     margin: 580px 0 0 0;
+  }
+
+  @include breakpoint(small) {
+    display: none;
   }
 }
 
@@ -140,6 +155,15 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  @include breakpoint(small) {
+    height: auto;
+    padding: 30px 20px;
+    p {
+      position: static;
+      transform: none;
+    }
+  }
 }
 
 .hiw-box-border-top {
@@ -149,6 +173,10 @@
     top: -98px;
     height: 90px;
     bottom: auto;
+  }
+
+  @include breakpoint(small) {
+    height: auto;
   }
 }
 
@@ -167,6 +195,17 @@
   p {
     color: #fff;
     font-size: 26px;
+  }
+
+  @include breakpoint(small) {
+    height: auto;
+    padding: 50px;
+    &:after {
+      display: none;
+    }
+    p {
+      font-size: 22px;
+    }
   }
 }
 
@@ -199,6 +238,15 @@
     top: 0;
     transform: translateY(0);
     padding: 0 0 25px;
+  }
+
+  @include breakpoint(small) {
+    height: auto;
+    padding: 60px 40px;
+    &:before,
+    &:after {
+      display: none;
+    }
   }
 }
 
@@ -256,6 +304,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  @include breakpoint(small) {
+    top: auto;
+  }
 }
 
 .hiw-logo {
@@ -264,6 +316,10 @@
 
 .hiw-btn {
   margin-top: 580px;
+
+  @include breakpoint(small) {
+    margin: 0;
+  }
 }
 
 .hiw-btn-border {
@@ -287,5 +343,13 @@
     height: 2px;
     width: 90px;
     margin-left: -45px;
+  }
+
+  @include breakpoint(small) {
+    margin: 0;
+    &:before,
+    &:after {
+      display: none;
+    }
   }
 }

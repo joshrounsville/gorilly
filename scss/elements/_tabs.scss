@@ -27,10 +27,6 @@
     border-bottom: 9px solid $green;
     padding: 5px 0;
     height: 54px;
-    &.tab-nav {
-      font-size: 14px;
-      padding: 15px 0 5px;
-    }
     &.active {
       color: $darkGray;
       border-bottom: 9px solid $yellow;
@@ -46,6 +42,8 @@
       color: $lightGreen;
     }
     &.tab-nav {
+      font-size: 14px;
+      padding: 15px 0 5px;
       &:hover,
       &:focus {
         color: $darkGray;
@@ -62,6 +60,28 @@
       span {
         font-size: 22px;
         margin: 0 3px 0 0;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    li {
+      .tab-item {
+        height: 80px;
+        font-size: 10px;
+        text-align: center;
+        padding: 5px 5px 0;
+        span {
+          font-size: 22px;
+          margin: auto;
+          display: block;
+          width: 100%;
+          text-align: center;
+          height: auto;
+          padding-bottom: 3px;
+        }
+        &.tab-nav {
+          height: 60px;
+        }
       }
     }
   }
@@ -83,12 +103,32 @@
     float: right;
     margin-right: 20px;
   }
+
+  @include breakpoint(small) {
+    padding: 30px 10px 0;
+    .btn-next,
+    .btn-post,
+    .btn-edit {
+      float: none;
+      display: block;
+      margin: 0;
+    }
+    .btn-post {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .tab-wrap-account {
   .tab-content {
     position: relative;
     padding-bottom: 40px;
+  }
+
+  @include breakpoint(small) {
+    .tab-content {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -102,6 +142,11 @@
   }
   .tab-wrap-account & {
     min-height: 1px;
+  }
+
+  @include breakpoint(small) {
+    padding-bottom: 20px;
+    min-height: 0;
   }
 }
 
@@ -127,6 +172,12 @@
     }
     &:before {
       background: $lightGreen;
+    }
+  }
+
+  @include breakpoint(small) {
+    .btn-back {
+      display: none;
     }
   }
 }

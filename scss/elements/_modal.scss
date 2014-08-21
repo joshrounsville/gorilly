@@ -39,6 +39,13 @@
   position: relative;
   width: 50%;
   margin: 40px auto 0;
+
+  @include breakpoint(medium) {
+    width: 90%;
+  }
+  @include breakpoint(small) {
+    width: 90%;
+  }
 }
 
 .modal-content {
@@ -107,5 +114,9 @@
       padding: 30px 0;
       display: block;
     }
+  }
+
+  @include breakpoint(small) {
+    padding: 0 20px;
   }
 }
