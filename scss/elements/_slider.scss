@@ -93,7 +93,8 @@
 .slide-wrap {
   display: block;
   padding-bottom: 20px;
-  width: 100%;
+  width: 70%;
+  margin: auto;
   &:hover,
   &:focus {
     .circle {
@@ -129,11 +130,9 @@
 
   @include breakpoint(medium) {
     width: 70%;
-    margin: auto;
   }
   @include breakpoint(small) {
     width: 80%;
-    margin: auto;
     padding-bottom: 30px;
   }
 }
