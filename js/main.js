@@ -25,26 +25,37 @@ $(function() {
   // mobile nav hide/show
 
   var mobileNav = function() {
+
     var navBtn = $('.mobile-nav');
 
     navBtn.on('touchstart click', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
 
-      if ( body.hasClass('show-mobile-sub-nav') ) {
-        body.removeClass('show-mobile-sub-nav');
-      } else {
-        body.toggleClass('show-mobile-nav');
+      if ( notDesktop ) {
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        if ( body.hasClass('show-mobile-sub-nav') ) {
+          body.removeClass('show-mobile-sub-nav');
+        } else {
+          body.toggleClass('show-mobile-nav');
+        }
+
       }
 
     });
 
     var subNavBtn = $('.dropdown > a');
     subNavBtn.on('touchstart click', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
 
-      body.toggleClass('show-mobile-sub-nav');
+      if ( notDesktop ) {
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        body.toggleClass('show-mobile-sub-nav');
+
+      }
     });
   };
 
@@ -235,7 +246,7 @@ $(function() {
 
         setTimeout(function() {
           mainImgWrap.removeClass('loading');
-        }, 300);
+        }, 600);
 
       }
 

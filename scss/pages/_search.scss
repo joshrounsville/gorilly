@@ -7,6 +7,7 @@
   display: block;
   width: 100%;
   padding-right: 10px;
+  min-height: 800px;
   > li {
     display: block;
     width: 100%;
@@ -195,6 +196,7 @@
 
 .map-wrap {
   top: 100px;
+  width: 458px;
   &.affix {
     position: fixed;
   }
