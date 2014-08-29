@@ -63,6 +63,28 @@
       }
     }
   }
+  @include breakpoint(medium) {
+    li {
+      .tab-item {
+        height: 80px;
+        font-size: 10px;
+        text-align: center;
+        padding: 5px 5px 0;
+        span {
+          font-size: 22px;
+          margin: auto;
+          display: block;
+          width: 100%;
+          text-align: center;
+          height: auto;
+          padding-bottom: 3px;
+        }
+        &.tab-nav {
+          height: 60px;
+        }
+      }
+    }
+  }
   @include breakpoint(small) {
     li {
       .tab-item {

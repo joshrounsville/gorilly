@@ -34,7 +34,10 @@
     padding: 0 0 7px;
   }
   p {
-    margin: 0;
+    margin: 0 0 15px;
+    &:last-of-type {
+      margin: 0;
+    }
   }
   li {
     margin: 0 0 25px;

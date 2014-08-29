@@ -130,10 +130,16 @@
 
   @include breakpoint(medium) {
     width: 70%;
+    .circle {
+      opacity: 1;
+    }
   }
   @include breakpoint(small) {
     width: 80%;
     padding-bottom: 30px;
+    .circle {
+      opacity: 1;
+    }
   }
 }
 

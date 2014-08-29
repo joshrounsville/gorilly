@@ -72,6 +72,13 @@
     }
   }
 
+  @include breakpoint(large) {
+    font-size: 17px;
+    .inner {
+      padding: 25px;
+    }
+  }
+
   @include breakpoint(small) {
     .inner {
       padding: 15px;

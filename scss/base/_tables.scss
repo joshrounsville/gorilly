@@ -35,6 +35,53 @@ thead {
 }
 
 
+@include breakpoint(medium) {
+
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    > table {
+      margin-bottom: 0;
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          th, td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    > .table-bordered {
+      border: 0;
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th:first-child,
+          > td:first-child {
+            border-left: 0;
+          }
+          > th:last-child,
+          > td:last-child {
+            border-right: 0;
+          }
+          &:last-child {
+            > th,
+            > td {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
 @include breakpoint(small) {
 
   .table-responsive {

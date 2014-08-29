@@ -32,6 +32,9 @@
   @include breakpoint(large) {
     padding: 11px 60px;
   }
+  @include breakpoint(medium) {
+    padding: 11px 20px;
+  }
   @include breakpoint(small) {
     display: block;
     padding: 11px 0;
@@ -89,6 +92,9 @@
   padding: 11px 45px;
   max-width: 250px;
 
+  @include breakpoint(large) {
+    padding: 11px 35px;
+  }
   @include breakpoint(small) {
     padding: 11px 0;
     max-width: none;

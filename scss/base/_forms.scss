@@ -186,6 +186,42 @@ textarea {
     }
   }
 
+  @include breakpoint(large) {
+    .radio-list {
+      li {
+        width: 29%;
+        margin: 0 10px;
+        &:first-of-type {
+          margin: 0 10px 0 0;
+        }
+        &:last-of-type {
+          margin: 0 0 0 10px;
+        }
+      }
+      label {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    .radio-list {
+      li {
+        width: 29%;
+        margin: 0 10px;
+        &:first-of-type {
+          margin: 0 10px 0 0;
+        }
+        &:last-of-type {
+          margin: 0 0 0 10px;
+        }
+      }
+      label {
+        font-size: 13px;
+      }
+    }
+  }
+
   @include breakpoint(small) {
     &.form-row-bottom {
       position: static;
@@ -416,8 +452,27 @@ textarea {
   }
 
   @include breakpoint(large) {
+    .select-wrap {
+      width: 335px;
+    }
     label {
+      font-size: 13px;
+    }
+    textarea {
       font-size: 14px;
+    }
+    .thumbnails {
+      > li {
+        width: 128px;
+        height: 128px;
+        &.empty {
+          &:before,
+          &:after {
+            height: 180px;
+            top: -27px;
+          }
+        }
+      }
     }
   }
 
@@ -426,6 +481,16 @@ textarea {
       margin-right: 0;
       margin-bottom: 10px;
       width: 100%;
+      position: relative;
+      &:after {
+        content: "\f078";
+        font-family: fontAwesome;
+        color: $orange;
+        position: absolute;
+        right: 8px;
+        top: 12px;
+        font-size: 22px;
+      }
     }
     textarea,
     input {
@@ -834,8 +899,9 @@ textarea {
         color: $orange;
         display: block;
         position: absolute;
+        top: auto;
         right: 0;
-        bottom: 5px;
+        bottom: 6px;
         width: 30px;
         height: 30px;
       }
@@ -883,6 +949,19 @@ textarea {
     vertical-align: middle;
     label {
       margin: 0 0 2px;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .radio-list {
+      width: 73%;
+      li {
+        width: 30%;
+        margin: 0;
+        label {
+          font-size: 10px;
+        }
+      }
     }
   }
 
