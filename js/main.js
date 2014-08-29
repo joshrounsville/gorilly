@@ -122,97 +122,80 @@ $(function() {
     var actionNav = navWrap.find('.tab-nav');
     var tab = $('.tab');
     var tabWrap = $('.tab-wrap');
-    var formBtn = $('.tab .btn-form');
     var editBtn = $('.tab .btn-edit');
-    var count = tab.length;
 
-    // if next/prev act as nav (list a product)
-    formBtn.on('click', function(e) {
-      e.preventDefault();
+    init = function() {
+      checkHash();
+      navTabClick();
+      editBtnClick();
+    };
 
-      $('html, body').animate({
-        scrollTop: 0
-      }, 500);
+    init();
 
-      var currentTab = $(this).parents('.tab').attr('data-tab');
-          currentTab = currentTab.split('-');
-          currentTab = parseInt(currentTab[1], 10);
-      var nextTab = currentTab + 1;
-      var prevTab = currentTab - 1;
-      var target;
-      var targetNav;
 
-      if ( $(this).hasClass('btn-next') ) {
-        target = tabWrap.find('.tab[data-tab=tab-' + nextTab + ']');
-        targetNav = navWrap.find('.tab-item[data-target=tab-' + nextTab + ']');
+    function editBtnClick() {
 
-        if ( nextTab <= count ) {
-          tab.removeClass('active');
-          nav.removeClass('active');
+      editBtn.on('click', function(e) {
+        e.preventDefault();
 
-          target.addClass('active');
-          targetNav.addClass('active');
-        }
+        $('html, body').animate({
+          scrollTop: 0
+        }, 500);
 
-      } else if ( $(this).hasClass('btn-back') ) {
-        target = tabWrap.find('.tab[data-tab=tab-' + prevTab + ']');
-        targetNav = navWrap.find('.tab-item[data-target=tab-' + prevTab + ']');
+        tab.removeClass('active');
+        nav.removeClass('active');
 
-        if ( prevTab > 0 ) {
-          tab.removeClass('active');
-          nav.removeClass('active');
+        tabWrap.find('.tab[data-tab=tab-1]').addClass('active');
+        navWrap.find('.tab-item[data-target=tab-1]').addClass('active');
+      });
 
-          target.addClass('active');
-          targetNav.addClass('active');
-        }
-
-      }
-
-    });
-
-    editBtn.on('click', function(e) {
-      e.preventDefault();
-
-      tab.removeClass('active');
-      nav.removeClass('active');
-
-      tabWrap.find('.tab[data-tab=tab-1]').addClass('active');
-      navWrap.find('.tab-item[data-target=tab-1]').addClass('active');
-    });
+    }
 
 
     // if tabs act as nav ( account page )
-    actionNav.on('click', function(e) {
-      e.preventDefault();
+    function navTabClick() {
 
-      var target = $(this).attr('data-target');
-      var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
-      var url = '?=' + target;
+      actionNav.on('click', function(e) {
+        e.preventDefault();
 
-      tab.removeClass('active');
-      nav.removeClass('active');
+        $('html, body').animate({
+          scrollTop: 0
+        }, 500);
 
-      tabTarget.addClass('active');
-      $(this).addClass('active');
+        var target = $(this).attr('data-target');
+        var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
+        var url = '?=' + target;
 
-      window.location.hash = url;
+        tab.removeClass('active');
+        nav.removeClass('active');
 
-    });
+        tabTarget.addClass('active');
+        $(this).addClass('active');
+
+        window.location.hash = url;
+
+      });
+
+    }
 
     // check url for #?=
-    if ( window.location.hash.length ) {
-      var hash = window.location.hash;
+    function checkHash() {
 
-      if ( hash.indexOf('?=') > 0 ) {
-        var target = hash.split('=')[1];
-        var navTarget = $(navWrap).find('.tab-nav[data-target=' + target + ']');
-        var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
+      if ( window.location.hash.length ) {
+        var hash = window.location.hash;
 
-        nav.removeClass('active');
-        tab.removeClass('active');
+        if ( hash.indexOf('?=') > 0 ) {
+          var target = hash.split('=')[1];
+          var navTarget = $(navWrap).find('.tab-nav[data-target=' + target + ']');
+          var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
 
-        navTarget.addClass('active');
-        tabTarget.addClass('active');
+          nav.removeClass('active');
+          tab.removeClass('active');
+
+          navTarget.addClass('active');
+          tabTarget.addClass('active');
+        }
+
       }
 
     }
@@ -223,6 +206,61 @@ $(function() {
   tabs();
 
 
+
+  window.navTabs = function(el) {
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+
+    var currentTab = $(el).parents('.tab').attr('data-tab');
+        currentTab = currentTab.split('-');
+        currentTab = parseInt(currentTab[1], 10);
+    var tabWrap = $('.tab-wrap');
+    var navWrap = $('.tab-nav');
+    var nextTab = currentTab + 1;
+    var prevTab = currentTab - 1;
+    var tab = $('.tab');
+    var count = tab.length;
+    var nav = navWrap.find('.tab-item');
+    var target;
+    var targetNav;
+
+    if ( $(el).hasClass('btn-next') ) {
+      target = tabWrap.find('.tab[data-tab=tab-' + nextTab + ']');
+      targetNav = navWrap.find('.tab-item[data-target=tab-' + nextTab + ']');
+
+      if ( nextTab <= count ) {
+        tab.removeClass('active');
+        nav.removeClass('active');
+
+        target.addClass('active');
+        targetNav.addClass('active');
+      }
+
+    } else if ( $(el).hasClass('btn-back') ) {
+      target = tabWrap.find('.tab[data-tab=tab-' + prevTab + ']');
+      targetNav = navWrap.find('.tab-item[data-target=tab-' + prevTab + ']');
+
+      if ( prevTab > 0 ) {
+        tab.removeClass('active');
+        nav.removeClass('active');
+
+        target.addClass('active');
+        targetNav.addClass('active');
+      }
+
+    }
+  };
+
+
+  var formBtn = $('.tab .btn-form');
+  formBtn.on('click', function(e) {
+    e.preventDefault();
+    var el = $(this);
+
+    navTabs(el);
+  });
 
 
 
