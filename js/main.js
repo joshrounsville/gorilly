@@ -13,6 +13,11 @@ $(function() {
   });
 
 
+  if ( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+    $('html').addClass('moz');
+  }
+
+
   // svg fallback
   if ( !Modernizr.svg ) {
     $('img[src*="svg"]').attr('src', function() {
@@ -158,9 +163,11 @@ $(function() {
       actionNav.on('click', function(e) {
         e.preventDefault();
 
-        $('html, body').animate({
-          scrollTop: 0
-        }, 500);
+        if ( isDesktop ) {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 500);
+        }
 
         var target = $(this).attr('data-target');
         var tabTarget = $(tabWrap).find('.tab[data-tab=' + target + ']');
