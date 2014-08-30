@@ -128,8 +128,13 @@
       margin: 0;
     }
     a {
+      color: $darkGray;
       font-size: 14px;
       margin-left: 5px;
+      &:hover,
+      &:focus {
+        color: $green;
+      }
     }
   }
   h5 {
