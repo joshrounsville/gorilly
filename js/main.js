@@ -254,13 +254,13 @@ $(function() {
   };
 
 
-  var formBtn = $('.tab .btn-form');
-  formBtn.on('click', function(e) {
-    e.preventDefault();
-    var el = $(this);
+  // var formBtn = $('.tab .btn-form');
+  // formBtn.on('click', function(e) {
+  //   e.preventDefault();
+  //   var el = $(this);
 
-    navTabs(el);
-  });
+  //   navTabs(el);
+  // });
 
 
 
