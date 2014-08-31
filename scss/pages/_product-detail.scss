@@ -40,9 +40,41 @@
     right: 0;
     padding: 8px 40px;
     color: $darkGray;
+    z-index: 2;
     &:hover,
     &:focus {
       background: darken($green, 10%);
+    }
+  }
+  .list-share {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: right 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    &.show {
+      opacity: 1;
+      right: 130px;
+    }
+    li {
+      display: inline-block;
+      margin: 0 0 0 2px;
+    }
+    a {
+      display: block;
+      font-size: 18px;
+      padding: 4px 0 0 0;
+      color: #fff;
+      background: $green;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border-radius: 100%;
+      &:hover,
+      &:focus {
+        background: darken($green, 10%);
+      }
     }
   }
   time {
@@ -202,6 +234,8 @@
     img {
       top: 0;
       transform: none;
+      margin: auto;
+      display: block;
     }
   }
 }
@@ -225,5 +259,14 @@
   img {
     transition: transform .1s ease;
     backface-visibility: hidden;
+  }
+
+  @include breakpoint(small) {
+    margin: 0 -1%;;
+    li {
+      padding: 0 0 20px;
+      margin: 0 1%;
+      width: 23%;
+    }
   }
 }

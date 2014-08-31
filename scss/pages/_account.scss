@@ -75,6 +75,20 @@
   margin: 0 0 50px;
 }
 
+.message-content {
+  @include breakpoint(small) {
+    .list-inline {
+      li {
+        display: block;
+        margin: 0 0 10px;
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 .reply-content {
   padding-top: 0;
   height: 0;

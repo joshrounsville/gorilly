@@ -27,6 +27,75 @@ $(function() {
 
 
 
+  // if mobile, adjust facebook sharer url (product detail page)
+
+  var facebookUrlChange = function() {
+
+    var link = $('a.facebook-share');
+    var url = link.attr('href');
+    var keeper = url.split('?');
+        keeper = keeper[1];
+
+    var newUrl = 'https://m.facebook.com/sharer.php?' + keeper;
+
+    link.attr('href', newUrl);
+
+  };
+
+  if ( notDesktop ) {
+    facebookUrlChange();
+  }
+
+
+
+  // open share pages in small windows
+
+  var openSocial = function() {
+
+    var shareButton = $('a.share-link');
+
+    shareButton.on('touchstart click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var href = $(this).attr('href');
+
+      if ( isDesktop ) {
+        window.open(href, null, 'toolbar=no,menubar=no,width=540,height=380');
+      } else {
+        document.location.href = href;
+      }
+
+    });
+
+  };
+
+  openSocial();
+
+
+
+  // on share button click, show share icons
+
+  var showShare = function() {
+
+    var btn = $('.btn-share');
+    var shareList = $('.list-share');
+
+    btn.on('touchstart click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      shareList.toggleClass('show');
+
+    });
+
+  };
+
+  showShare();
+
+
+
+
   // mobile nav hide/show
 
   var mobileNav = function() {
@@ -75,6 +144,11 @@ $(function() {
     var $slider = $('.slider');
     var $sliderNext = $('a.slide-next');
     var $sliderPrev = $('a.slide-prev');
+    var slidesToShowCount = 3;
+
+    if ( isPhone ) {
+      slidesToShowCount = 1;
+    }
 
     $slider.slick({
       infinite: true,
@@ -82,7 +156,7 @@ $(function() {
       draggable: false,
       arrows: false,
       lazyLoad: 'ondemand',
-      slidesToShow: 3,
+      slidesToShow: slidesToShowCount,
       slidesToScroll: 1
     });
 
