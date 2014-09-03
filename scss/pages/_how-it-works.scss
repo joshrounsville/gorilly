@@ -129,6 +129,11 @@
   width: 280px;
   height: 280px;
   margin-top: 10px;
+
+  @include breakpoint(medium) {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 .hiw-box {
@@ -336,6 +341,17 @@
     transform: translateY(-50%);
   }
 
+  @include breakpoint(medium) {
+    width: 220px;
+    height: 220px;
+    padding: 15px;
+    top: -20px;
+    .inner {
+      width: 190px;
+      height: 190px;
+    }
+  }
+
   @include breakpoint(small) {
     top: auto;
   }
@@ -376,6 +392,10 @@
     margin-left: -45px;
   }
 
+  @include breakpoint(medium) {
+    padding: 18px 30px;
+    font-size: 18px;
+  }
   @include breakpoint(small) {
     margin: 0;
     &:before,

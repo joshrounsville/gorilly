@@ -868,6 +868,7 @@ textarea {
     display: block;
     float: left;
     margin: 0 0 0 -1px;
+    @include clearfix();
     &:nth-of-type(2n) {
       .chosen-single {
         border-left: none;
@@ -883,6 +884,20 @@ textarea {
     input {
       @include oswald();
       font-size: 14px;
+      background: transparent;
+      border: 1px solid $darkGray;
+      border-radius: 0px;
+      color: #ccc;
+      width: 100%;
+      transition: border .2s ease-in-out;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        border: 1px solid $lightGray;
+        outline: 0;
+      }
     }
   }
   .btn-wrap {
@@ -892,6 +907,7 @@ textarea {
     border: 1px solid $darkGray;
     border-left: none;
     padding: 8px 10px;
+    @include clearfix();
   }
   .btn {
     display: block;
@@ -904,6 +920,9 @@ textarea {
   }
 
   @include breakpoint(medium) {
+    .select-wrap {
+      margin: 0;
+    }
     .btn {
       display: block;
       width: 100%;
@@ -932,9 +951,13 @@ textarea {
         width: 30px;
         height: 30px;
       }
+      input {
+        float: none;
+      }
     }
     .btn-wrap {
       border: 1px solid $darkGray;
+      margin-top: 20px;
     }
     label {
       margin: 0;

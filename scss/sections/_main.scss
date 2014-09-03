@@ -17,6 +17,12 @@ section {
     }
   }
 
+  @include breakpoint(medium) {
+    .row {
+      animation: none;
+    }
+  }
+
   @include breakpoint(small) {
     .container {
       padding-bottom: 20px;
