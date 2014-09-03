@@ -42,7 +42,7 @@ $(function() {
 
   };
 
-  if ( notDesktop ) {
+  if ( notDesktop && $('.facebook-share').length ) {
     facebookUrlChange();
   }
 
@@ -410,7 +410,7 @@ $(function() {
 
   };
 
-  if ( affixEl.length && !isPhone ) {
+  if ( affixEl.length && isDesktop ) {
     affix();
   }
 
@@ -440,7 +440,7 @@ $(function() {
 
   };
 
-  if ( formEl.length && !isPhone ) {
+  if ( formEl.length && isDesktop ) {
     formScroll();
   }
 
